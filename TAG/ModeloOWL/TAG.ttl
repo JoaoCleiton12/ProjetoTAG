@@ -1,0 +1,692 @@
+@prefix : <http://example.com#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix gufo: <http://purl.org/nemo/gufo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.com#> .
+
+<http://example.com> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.com#Acompanha
+:Acompanha rdf:type owl:ObjectProperty ;
+           rdfs:domain :ProfissionalDeSade ;
+           rdfs:range :Paciente .
+
+
+###  http://example.com#Esta_associado
+:Esta_associado rdf:type owl:ObjectProperty ;
+                rdfs:domain :TAG ;
+                rdfs:range :TranstornoPsiquitrico .
+
+
+###  http://example.com#diagnsticado_com
+:diagnsticado_com rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Paciente ;
+                  rdfs:range :TAG .
+
+
+###  http://example.com#fsicoHasSomtico
+:fsicoHasSomtico rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Fsico ;
+                 rdfs:range :Somtico .
+
+
+###  http://example.com#medicamentoHasPsicolgico
+:medicamentoHasPsicolgico rdf:type owl:ObjectProperty ;
+                          rdfs:domain :Medicamento ;
+                          rdfs:range :Psicolgico .
+
+
+###  http://example.com#profissionalDeSadeHasTag
+:profissionalDeSadeHasTag rdf:type owl:ObjectProperty ;
+                          rdfs:domain :ProfissionalDeSade ;
+                          rdfs:range :TAG .
+
+
+###  http://example.com#sintomaHasFsico
+:sintomaHasFsico rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Sintoma ;
+                 rdfs:range :Fsico .
+
+
+###  http://example.com#sintomaHasSomtico
+:sintomaHasSomtico rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Sintoma ;
+                   rdfs:range :Somtico .
+
+
+###  http://example.com#tratamentoHasMedicamento
+:tratamentoHasMedicamento rdf:type owl:ObjectProperty ;
+                          rdfs:domain :Tratamento ;
+                          rdfs:range :Medicamento .
+
+
+###  http://example.com#tratamentoHasPsicolgico
+:tratamentoHasPsicolgico rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Tratamento ;
+                         rdfs:range :Psicolgico .
+
+
+###  http://purl.org/nemo/gufo#inheresIn
+gufo:inheresIn rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/nemo/gufo#mediates
+gufo:mediates rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.com#Ansioltico
+:Ansioltico rdf:type owl:Class ;
+            rdfs:subClassOf :Medicamento .
+
+
+###  http://example.com#Antidepressivo
+:Antidepressivo rdf:type owl:Class ;
+                rdfs:subClassOf :Medicamento .
+
+
+###  http://example.com#Comorbidade
+:Comorbidade rdf:type owl:Class ;
+             rdfs:subClassOf gufo:Relator ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty gufo:mediates ;
+                               owl:someValuesFrom :TAG
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty gufo:mediates ;
+                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :TranstornoPsiquitrico
+                             ] .
+
+
+###  http://example.com#Curso
+:Curso rdf:type owl:Class ;
+       rdfs:subClassOf gufo:IntrinsicMode ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty gufo:inheresIn ;
+                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :TAG
+                       ] .
+
+
+###  http://example.com#DepressaoMaior
+:DepressaoMaior rdf:type owl:Class ;
+                rdfs:subClassOf :TranstornoPsiquitrico .
+
+
+###  http://example.com#Diagnstico
+:Diagnstico rdf:type owl:Class ;
+            rdfs:subClassOf gufo:Relator ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty gufo:mediates ;
+                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Paciente
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty gufo:mediates ;
+                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :ProfissionalDeSade
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty gufo:mediates ;
+                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :TAG
+                            ] .
+
+
+###  http://example.com#DificuldadeDeConcentrao
+:DificuldadeDeConcentrao rdf:type owl:Class ;
+                         rdfs:subClassOf :Fsico .
+
+
+###  http://example.com#Fatigabilidade
+:Fatigabilidade rdf:type owl:Class ;
+                rdfs:subClassOf :Fsico .
+
+
+###  http://example.com#Flutuante
+:Flutuante rdf:type owl:Class ;
+           rdfs:subClassOf :Curso .
+
+
+###  http://example.com#FobiaEspecfica
+:FobiaEspecfica rdf:type owl:Class ;
+                rdfs:subClassOf :TranstornoPsiquitrico .
+
+
+###  http://example.com#Fsico
+:Fsico rdf:type owl:Class ;
+       rdfs:subClassOf gufo:FunctionalComplex ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty [ owl:inverseOf gufo:mediates
+                                        ] ;
+                         owl:someValuesFrom :Manifestao
+                       ] .
+
+
+###  http://example.com#Inquietao
+:Inquietao rdf:type owl:Class ;
+           rdfs:subClassOf :Fsico .
+
+
+###  http://example.com#Irritabilidade
+:Irritabilidade rdf:type owl:Class ;
+                rdfs:subClassOf :Fsico .
+
+
+###  http://example.com#LongaDurao
+:LongaDurao rdf:type owl:Class ;
+            rdfs:subClassOf :Curso .
+
+
+###  http://example.com#Manifestao
+:Manifestao rdf:type owl:Class ;
+            rdfs:subClassOf gufo:Relator ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty gufo:mediates ;
+                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Fsico
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty gufo:mediates ;
+                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Sintoma
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty gufo:mediates ;
+                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Somtico
+                            ] .
+
+
+###  http://example.com#Medicamento
+:Medicamento rdf:type owl:Class ;
+             rdfs:subClassOf gufo:FunctionalComplex ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty [ owl:inverseOf gufo:mediates
+                                              ] ;
+                               owl:someValuesFrom :Prescrio
+                             ] .
+
+
+###  http://example.com#Paciente
+:Paciente rdf:type owl:Class ;
+          rdfs:subClassOf gufo:FunctionalComplex ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty [ owl:inverseOf gufo:mediates
+                                           ] ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Diagnstico
+                          ] .
+
+
+###  http://example.com#PerturbaoDeSono
+:PerturbaoDeSono rdf:type owl:Class ;
+                 rdfs:subClassOf :Fsico .
+
+
+###  http://example.com#Prescrio
+:Prescrio rdf:type owl:Class ;
+          rdfs:subClassOf gufo:Relator ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty gufo:mediates ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Medicamento
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty gufo:mediates ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Psicolgico
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty gufo:mediates ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Tratamento
+                          ] .
+
+
+###  http://example.com#ProfissionalDeSade
+:ProfissionalDeSade rdf:type owl:Class ;
+                    rdfs:subClassOf gufo:FunctionalComplex ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty [ owl:inverseOf gufo:mediates
+                                                     ] ;
+                                      owl:someValuesFrom :Diagnstico
+                                    ] .
+
+
+###  http://example.com#Psicolgico
+:Psicolgico rdf:type owl:Class ;
+            rdfs:subClassOf gufo:FunctionalComplex ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty [ owl:inverseOf gufo:mediates
+                                             ] ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Prescrio
+                            ] .
+
+
+###  http://example.com#Psicoterapia
+:Psicoterapia rdf:type owl:Class ;
+              rdfs:subClassOf :Psicolgico .
+
+
+###  http://example.com#Sintoma
+:Sintoma rdf:type owl:Class ;
+         rdfs:subClassOf gufo:FunctionalComplex ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty [ owl:inverseOf gufo:mediates
+                                          ] ;
+                           owl:someValuesFrom :Manifestao
+                         ] .
+
+
+###  http://example.com#Somtico
+:Somtico rdf:type owl:Class ;
+         rdfs:subClassOf gufo:FunctionalComplex ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty [ owl:inverseOf gufo:mediates
+                                          ] ;
+                           owl:someValuesFrom :Manifestao
+                         ] .
+
+
+###  http://example.com#TAG
+:TAG rdf:type owl:Class ;
+     rdfs:subClassOf gufo:FunctionalComplex ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                      ] ;
+                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                       owl:onClass :Curso
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty [ owl:inverseOf gufo:mediates
+                                      ] ;
+                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                       owl:onClass :Diagnstico
+                     ] .
+
+
+###  http://example.com#TensoMuscular
+:TensoMuscular rdf:type owl:Class ;
+               rdfs:subClassOf :Fsico .
+
+
+###  http://example.com#TranstornoAnsiedadeSocial
+:TranstornoAnsiedadeSocial rdf:type owl:Class ;
+                           rdfs:subClassOf :TranstornoPsiquitrico .
+
+
+###  http://example.com#TranstornoDoPnico
+:TranstornoDoPnico rdf:type owl:Class ;
+                   rdfs:subClassOf :TranstornoPsiquitrico .
+
+
+###  http://example.com#TranstornoPsiquitrico
+:TranstornoPsiquitrico rdf:type owl:Class ;
+                       rdfs:subClassOf gufo:FunctionalComplex ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty [ owl:inverseOf gufo:mediates
+                                                        ] ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass :Comorbidade
+                                       ] .
+
+
+###  http://example.com#Tratamento
+:Tratamento rdf:type owl:Class ;
+            rdfs:subClassOf gufo:FunctionalComplex ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty [ owl:inverseOf gufo:mediates
+                                             ] ;
+                              owl:someValuesFrom :Prescrio
+                            ] .
+
+
+###  http://purl.org/nemo/gufo#Category
+gufo:Category rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#FunctionalComplex
+gufo:FunctionalComplex rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#IntrinsicMode
+gufo:IntrinsicMode rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Kind
+gufo:Kind rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#MaterialRelationshipType
+gufo:MaterialRelationshipType rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Relator
+gufo:Relator rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#SubKind
+gufo:SubKind rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.com#Acompanha
+:Acompanha rdf:type owl:NamedIndividual ,
+                    gufo:MaterialRelationshipType .
+
+
+###  http://example.com#Ansioltico
+:Ansioltico rdf:type owl:NamedIndividual ,
+                     gufo:SubKind .
+
+
+###  http://example.com#Antidepressivo
+:Antidepressivo rdf:type owl:NamedIndividual ,
+                         gufo:SubKind .
+
+
+###  http://example.com#Comorbidade
+:Comorbidade rdf:type owl:NamedIndividual ,
+                      gufo:Kind .
+
+
+###  http://example.com#Curso
+:Curso rdf:type owl:NamedIndividual ,
+                gufo:Kind .
+
+
+###  http://example.com#DepressaoMaior
+:DepressaoMaior rdf:type owl:NamedIndividual ,
+                         gufo:SubKind .
+
+
+###  http://example.com#Diagnstico
+:Diagnstico rdf:type owl:NamedIndividual ,
+                     gufo:Kind .
+
+
+###  http://example.com#DificuldadeDeConcentrao
+:DificuldadeDeConcentrao rdf:type owl:NamedIndividual ,
+                                  gufo:SubKind .
+
+
+###  http://example.com#Esta_associado
+:Esta_associado rdf:type owl:NamedIndividual ,
+                         gufo:MaterialRelationshipType .
+
+
+###  http://example.com#Fatigabilidade
+:Fatigabilidade rdf:type owl:NamedIndividual ,
+                         gufo:SubKind .
+
+
+###  http://example.com#Flutuante
+:Flutuante rdf:type owl:NamedIndividual ,
+                    gufo:SubKind .
+
+
+###  http://example.com#FobiaEspecfica
+:FobiaEspecfica rdf:type owl:NamedIndividual ,
+                         gufo:SubKind .
+
+
+###  http://example.com#Fsico
+:Fsico rdf:type owl:NamedIndividual ,
+                gufo:Kind .
+
+
+###  http://example.com#Inquietao
+:Inquietao rdf:type owl:NamedIndividual ,
+                    gufo:SubKind .
+
+
+###  http://example.com#Irritabilidade
+:Irritabilidade rdf:type owl:NamedIndividual ,
+                         gufo:SubKind .
+
+
+###  http://example.com#LongaDurao
+:LongaDurao rdf:type owl:NamedIndividual ,
+                     gufo:SubKind .
+
+
+###  http://example.com#Manifestao
+:Manifestao rdf:type owl:NamedIndividual ,
+                     gufo:Kind .
+
+
+###  http://example.com#Medicamento
+:Medicamento rdf:type owl:NamedIndividual ,
+                      gufo:Kind .
+
+
+###  http://example.com#Paciente
+:Paciente rdf:type owl:NamedIndividual ,
+                   gufo:Kind .
+
+
+###  http://example.com#PerturbaoDeSono
+:PerturbaoDeSono rdf:type owl:NamedIndividual ,
+                          gufo:SubKind .
+
+
+###  http://example.com#Prescrio
+:Prescrio rdf:type owl:NamedIndividual ,
+                   gufo:Kind .
+
+
+###  http://example.com#ProfissionalDeSade
+:ProfissionalDeSade rdf:type owl:NamedIndividual ,
+                             gufo:Kind .
+
+
+###  http://example.com#Psicolgico
+:Psicolgico rdf:type owl:NamedIndividual ,
+                     gufo:Kind .
+
+
+###  http://example.com#Psicoterapia
+:Psicoterapia rdf:type owl:NamedIndividual ,
+                       gufo:SubKind .
+
+
+###  http://example.com#Sintoma
+:Sintoma rdf:type owl:NamedIndividual ,
+                  gufo:Category .
+
+
+###  http://example.com#Somtico
+:Somtico rdf:type owl:NamedIndividual ,
+                  gufo:Kind .
+
+
+###  http://example.com#TAG
+:TAG rdf:type owl:NamedIndividual ,
+              gufo:Category .
+
+
+###  http://example.com#TensoMuscular
+:TensoMuscular rdf:type owl:NamedIndividual ,
+                        gufo:SubKind .
+
+
+###  http://example.com#TranstornoAnsiedadeSocial
+:TranstornoAnsiedadeSocial rdf:type owl:NamedIndividual ,
+                                    gufo:SubKind .
+
+
+###  http://example.com#TranstornoDoPnico
+:TranstornoDoPnico rdf:type owl:NamedIndividual ,
+                            gufo:SubKind .
+
+
+###  http://example.com#TranstornoPsiquitrico
+:TranstornoPsiquitrico rdf:type owl:NamedIndividual ,
+                                gufo:Kind .
+
+
+###  http://example.com#Tratamento
+:Tratamento rdf:type owl:NamedIndividual ,
+                     gufo:Category .
+
+
+###  http://example.com#diagnsticado_com
+:diagnsticado_com rdf:type owl:NamedIndividual ,
+                           gufo:MaterialRelationshipType .
+
+
+###  http://example.com#fsicoHasSomtico
+:fsicoHasSomtico rdf:type owl:NamedIndividual ,
+                          gufo:MaterialRelationshipType .
+
+
+###  http://example.com#medicamentoHasPsicolgico
+:medicamentoHasPsicolgico rdf:type owl:NamedIndividual ,
+                                   gufo:MaterialRelationshipType .
+
+
+###  http://example.com#profissionalDeSadeHasTag
+:profissionalDeSadeHasTag rdf:type owl:NamedIndividual ,
+                                   gufo:MaterialRelationshipType .
+
+
+###  http://example.com#sintomaHasFsico
+:sintomaHasFsico rdf:type owl:NamedIndividual ,
+                          gufo:MaterialRelationshipType .
+
+
+###  http://example.com#sintomaHasSomtico
+:sintomaHasSomtico rdf:type owl:NamedIndividual ,
+                            gufo:MaterialRelationshipType .
+
+
+###  http://example.com#tratamentoHasMedicamento
+:tratamentoHasMedicamento rdf:type owl:NamedIndividual ,
+                                   gufo:MaterialRelationshipType .
+
+
+###  http://example.com#tratamentoHasPsicolgico
+:tratamentoHasPsicolgico rdf:type owl:NamedIndividual ,
+                                  gufo:MaterialRelationshipType .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:Acompanha rdfs:label "Acompanha"@en .
+
+
+:Ansioltico rdfs:label "Ansiolítico"@en .
+
+
+:Antidepressivo rdfs:label "Antidepressivo"@en .
+
+
+:Comorbidade rdfs:label "Comorbidade"@en .
+
+
+:Curso rdfs:label "Curso"@en .
+
+
+:DepressaoMaior rdfs:label "Depressao maior"@en .
+
+
+:Diagnstico rdfs:label "Diagnóstico"@en .
+
+
+:DificuldadeDeConcentrao rdfs:label "Dificuldade de concentração"@en .
+
+
+:Esta_associado rdfs:label "Esta_associado"@en .
+
+
+:Fatigabilidade rdfs:label "Fatigabilidade"@en .
+
+
+:Flutuante rdfs:label "Flutuante"@en .
+
+
+:FobiaEspecfica rdfs:label "Fobia específica"@en .
+
+
+:Fsico rdfs:label "Físico"@en .
+
+
+:Inquietao rdfs:label "Inquietação"@en .
+
+
+:Irritabilidade rdfs:label "Irritabilidade"@en .
+
+
+:LongaDurao rdfs:label "Longa duração"@en .
+
+
+:Manifestao rdfs:label "Manifestação"@en .
+
+
+:Medicamento rdfs:label "Medicamento"@en .
+
+
+:Paciente rdfs:label "Paciente"@en .
+
+
+:PerturbaoDeSono rdfs:label "Perturbação de sono"@en .
+
+
+:Prescrio rdfs:label "Prescrição"@en .
+
+
+:ProfissionalDeSade rdfs:label "Profissional de Saúde"@en .
+
+
+:Psicolgico rdfs:label "Psicológico"@en .
+
+
+:Psicoterapia rdfs:label "Psicoterapia"@en .
+
+
+:Sintoma rdfs:label "Sintoma"@en .
+
+
+:Somtico rdfs:label "Somático"@en .
+
+
+:TAG rdfs:label "TAG"@en .
+
+
+:TensoMuscular rdfs:label "Tensão muscular"@en .
+
+
+:TranstornoAnsiedadeSocial rdfs:label "Transtorno ansiedade social"@en .
+
+
+:TranstornoDoPnico rdfs:label "Transtorno do pânico"@en .
+
+
+:TranstornoPsiquitrico rdfs:label "Transtorno psiquiátrico"@en .
+
+
+:Tratamento rdfs:label "Tratamento"@en .
+
+
+:diagnsticado_com rdfs:label "diagnosticado_com"@en .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
