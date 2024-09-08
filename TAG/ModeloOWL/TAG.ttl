@@ -82,6 +82,9 @@
 :Manifestacao rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
     rdfs:subClassOf gufo:Relator;
     rdfs:label "Manifestacao"@en.
+:Evento rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:IntrinsicMode;
+    rdfs:label "Evento"@en.
 :Ansiolitico rdfs:subClassOf :Medicamento.
 :Antidepressivo rdfs:subClassOf :Medicamento.
 :Psicoterapia rdfs:subClassOf :Psicologico.
@@ -289,4 +292,16 @@
   owl:onProperty gufo:historicallyDependsOn;
   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
   owl:onClass :Tratamento
+].
+:Evento rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:inheresIn ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :TAG
+].
+:TAG rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:inheresIn;
+  owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger;
+  owl:onClass :Evento
 ].
