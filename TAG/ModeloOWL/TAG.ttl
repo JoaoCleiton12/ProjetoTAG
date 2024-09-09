@@ -281,17 +281,16 @@
   owl:onProperty gufo:historicallyDependsOn;
   owl:someValuesFrom :Sintoma
 ].
-:Tratamento rdfs:subClassOf [
+:Sintoma rdfs:subClassOf [
   rdf:type owl:Restriction;
   owl:onProperty [ owl:inverseOf gufo:historicallyDependsOn ];
   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
-  owl:onClass :Sintoma
+  owl:onClass :Tratamento
 ].
-:Sintoma rdfs:subClassOf [
+:Tratamento rdfs:subClassOf [
   rdf:type owl:Restriction;
   owl:onProperty gufo:historicallyDependsOn;
-  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
-  owl:onClass :Tratamento
+  owl:someValuesFrom :Sintoma
 ].
 :Evento rdfs:subClassOf [
   rdf:type owl:Restriction;
