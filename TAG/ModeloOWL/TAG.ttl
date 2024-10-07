@@ -71,6 +71,14 @@
        rdfs:range :Ansiedade .
 
 
+###  http://example.com#Tem
+:Tem rdf:type owl:ObjectProperty ,
+              owl:AsymmetricProperty ,
+              owl:IrreflexiveProperty ;
+     rdfs:domain :Paciente ;
+     rdfs:range :Comorbidade .
+
+
 ###  http://example.com#acerca_de
 :acerca_de rdf:type owl:ObjectProperty ,
                     owl:AsymmetricProperty ,
@@ -769,6 +777,9 @@ gufo:SubKind rdf:type owl:Class .
 ###  http://example.com#BrendaLohanna
 :BrendaLohanna rdf:type owl:NamedIndividual ,
                         :Paciente ;
+               :Apresenta :Sintoma ;
+               :Sente :Ansiedade ;
+               :manifestado_como :Somatico ;
                :temIdadeDe 20 .
 
 
@@ -842,6 +853,20 @@ gufo:SubKind rdf:type owl:Class .
                          gufo:SubKind .
 
 
+###  http://example.com#FatimaNeves
+:FatimaNeves rdf:type owl:NamedIndividual ,
+                      :Paciente ;
+             :Apresenta :Sintoma ;
+             :Realizado_com :Clonazepam ,
+                            :SNRI ;
+             :Sente :Ansiedade ;
+             :Tem :DepressaoMaior ;
+             :diagnosticado_com :TAG ;
+             :manifestado_como :Fatigabilidade ,
+                               :TensaoMuscular ;
+             :realiza_um :Tratamento .
+
+
 ###  http://example.com#Fisico
 :Fisico rdf:type owl:NamedIndividual ,
                  gufo:Kind .
@@ -881,27 +906,40 @@ gufo:SubKind rdf:type owl:Class .
 :JorgeHugo rdf:type owl:NamedIndividual ,
                     :Paciente ;
            :Apresenta :Sintoma ;
-           :Realizado_com :SNRI ;
+           :Realizado_com :Estazolam ,
+                          :SSRI ;
            :Sente :Ansiedade ;
            :diagnosticado_com :TAG ;
            :manifestado_como :Fatigabilidade ,
                              :Inquietacao ,
                              :PerturbacaoDeSono ,
                              :TensaoMuscular ;
+           :realiza_um :Tratamento ;
+           gufo:inheresIn :LongaDuracao ;
            :temIdadeDe 34 .
+
+[ rdf:type owl:NegativePropertyAssertion ;
+   owl:sourceIndividual :JorgeHugo ;
+   owl:assertionProperty gufo:inheresIn ;
+   owl:targetIndividual :Flutuante
+ ] .
 
 
 ###  http://example.com#JoseSilva
 :JoseSilva rdf:type owl:NamedIndividual ,
                     :Paciente ;
-           :Apresenta :Sintoma ;
-           :Realizado_com :SSRI ;
+           :Apresenta :FobiaEspecifica ,
+                      :Sintoma ;
+           :Realizado_com :Bromazepam ,
+                          :SSRI ;
            :Sente :Ansiedade ;
            :diagnosticado_com :TAG ;
            :manifestado_como :Inquietacao ,
                              :Irritabilidade ,
                              :TensaoMuscular ;
            :realiza_um :Tratamento ;
+           gufo:inheresIn :Flutuante ,
+                          :LongaDuracao ;
            :temIdadeDe 23 .
 
 
@@ -912,7 +950,12 @@ gufo:SubKind rdf:type owl:Class .
 
 ###  http://example.com#LuizFelipe
 :LuizFelipe rdf:type owl:NamedIndividual ,
-                     :Paciente .
+                     :Paciente ;
+            :Apresenta :Sintoma ;
+            :Sente :Ansiedade ;
+            :Tem :FobiaEspecifica ;
+            :manifestado_como :Somatico ;
+            :temIdadeDe 16 .
 
 
 ###  http://example.com#Manifestacao
@@ -930,8 +973,10 @@ gufo:SubKind rdf:type owl:Class .
 :MariaCabral rdf:type owl:NamedIndividual ,
                       :Paciente ;
              :Apresenta :Sintoma ;
-             :Realizado_com :SSRI ;
+             :Realizado_com :Clonazepam ,
+                            :SNRI ;
              :Sente :Ansiedade ;
+             :Tem :TranstornoDoPanico ;
              :diagnosticado_com :TAG ;
              :manifestado_como :Fatigabilidade ,
                                :PerturbacaoDeSono ,
@@ -944,6 +989,13 @@ gufo:SubKind rdf:type owl:Class .
 ###  http://example.com#Medicamento
 :Medicamento rdf:type owl:NamedIndividual ,
                       gufo:Kind .
+
+
+###  http://example.com#MichaelDouglas
+:MichaelDouglas rdf:type owl:NamedIndividual ,
+                         :ProfissionalDeSaude ;
+                :Acompanha :JorgeHugo ,
+                           :MariaCabral .
 
 
 ###  http://example.com#NaoViciante
