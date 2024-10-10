@@ -101,6 +101,16 @@
 Transitive: Se um sintoma é causado pela ansiedade e essa ansiedade é causada por um gatilho, logo o sintoma é causado por um gatilho.""" .
 
 
+###  http://example.com#componetOf
+:componetOf rdf:type owl:ObjectProperty ,
+                     owl:AsymmetricProperty ,
+                     owl:TransitiveProperty ,
+                     owl:IrreflexiveProperty ;
+            rdfs:domain :TAG ;
+            rdfs:range :Fisico ,
+                       :Sintoma .
+
+
 ###  http://example.com#diagnostica
 :diagnostica rdf:type owl:ObjectProperty ,
                       owl:FunctionalProperty ,
@@ -853,20 +863,6 @@ gufo:SubKind rdf:type owl:Class .
                          gufo:SubKind .
 
 
-###  http://example.com#FatimaNeves
-:FatimaNeves rdf:type owl:NamedIndividual ,
-                      :Paciente ;
-             :Apresenta :Sintoma ;
-             :Realizado_com :Clonazepam ,
-                            :SNRI ;
-             :Sente :Ansiedade ;
-             :Tem :DepressaoMaior ;
-             :diagnosticado_com :TAG ;
-             :manifestado_como :Fatigabilidade ,
-                               :TensaoMuscular ;
-             :realiza_um :Tratamento .
-
-
 ###  http://example.com#Fisico
 :Fisico rdf:type owl:NamedIndividual ,
                  gufo:Kind .
@@ -941,6 +937,21 @@ gufo:SubKind rdf:type owl:Class .
            gufo:inheresIn :Flutuante ,
                           :LongaDuracao ;
            :temIdadeDe 23 .
+
+
+###  http://example.com#LarissaTrrs
+:LarissaTrrs rdf:type owl:NamedIndividual ,
+                      :Paciente ;
+             :Apresenta :Sintoma ;
+             :Realizado_com :Clonazepam ,
+                            :SNRI ;
+             :Sente :Ansiedade ;
+             :Tem :DepressaoMaior ;
+             :diagnosticado_com :TAG ;
+             :manifestado_como :Fatigabilidade ,
+                               :TensaoMuscular ;
+             :realiza_um :Tratamento ;
+             :temIdadeDe 18 .
 
 
 ###  http://example.com#LongaDuracao
