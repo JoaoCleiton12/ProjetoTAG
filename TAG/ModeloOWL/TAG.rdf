@@ -1,0 +1,2012 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.com#"
+     xml:base="http://example.com"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:gufo="http://purl.org/nemo/gufo#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://example.com"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com#Acompanha -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#Acompanha">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.com#ProfissionalDeSaude"/>
+        <rdfs:range rdf:resource="http://example.com#Paciente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#Apresenta -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#Apresenta">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.com#Paciente"/>
+        <rdfs:range rdf:resource="http://example.com#Sintoma"/>
+        <rdfs:label xml:lang="en">Apresenta</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#CoIntervencao -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#CoIntervencao">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.com#Medicamento"/>
+        <rdfs:range rdf:resource="http://example.com#Psicologico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#Com_auxilio -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#Com_auxilio">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.com#Tratamento"/>
+        <rdfs:range rdf:resource="http://example.com#Psicologico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#Ocorre_com -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#Ocorre_com">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.com#Fisico"/>
+        <rdfs:range rdf:resource="http://example.com#Somatico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#Realizado_com -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#Realizado_com">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.com#Tratamento"/>
+        <rdfs:range rdf:resource="http://example.com#Medicamento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#Sente -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#Sente">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.com#Paciente"/>
+        <rdfs:range rdf:resource="http://example.com#Ansiedade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#Tem -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#Tem">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.com#Paciente"/>
+        <rdfs:range rdf:resource="http://example.com#Comorbidade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#acerca_de -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#acerca_de">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.com#Ansiedade"/>
+        <rdfs:range rdf:resource="http://example.com#Gatilho"/>
+        <rdfs:label xml:lang="en">acerca_de</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#causada_por -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#causada_por">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.com#Sintoma"/>
+        <rdfs:range rdf:resource="http://example.com#Ansiedade"/>
+        <rdfs:comment>Funcional: Pois os sintomas nao podem ser causados por outra coisa que nao seja a ansiedade (por exemplo não pode ser causado por substancias).
+
+Transitive: Se um sintoma é causado pela ansiedade e essa ansiedade é causada por um gatilho, logo o sintoma é causado por um gatilho.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#componetOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#componetOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.com#TAG"/>
+        <rdfs:range rdf:resource="http://example.com#Fisico"/>
+        <rdfs:range rdf:resource="http://example.com#Sintoma"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#diagnostica -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#diagnostica">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.com#ProfissionalDeSaude"/>
+        <rdfs:range rdf:resource="http://example.com#TAG"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#diagnosticado_com -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#diagnosticado_com">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.com#Paciente"/>
+        <rdfs:range rdf:resource="http://example.com#TAG"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#manifestado_como -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#manifestado_como">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.com#Sintoma"/>
+        <rdfs:range rdf:resource="http://example.com#Fisico"/>
+        <rdfs:range rdf:resource="http://example.com#Somatico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com#realiza_um -->
+
+    <owl:ObjectProperty rdf:about="http://example.com#realiza_um">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.com#Paciente"/>
+        <rdfs:range rdf:resource="http://example.com#Tratamento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#externallyDependsOn -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#externallyDependsOn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#historicallyDependsOn -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#historicallyDependsOn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#inheresIn -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#inheresIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#mediates -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#mediates">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#wasCreatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#wasCreatedIn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com#temIdadeDe -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com#temIdadeDe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.com#Paciente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com#Ansiedade -->
+
+    <owl:Class rdf:about="http://example.com#Ansiedade">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Excessiva"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Ansiolitico -->
+
+    <owl:Class rdf:about="http://example.com#Ansiolitico">
+        <rdfs:subClassOf rdf:resource="http://example.com#Medicamento"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#EfeitoImediato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#UsoTemporario"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Viciante"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://example.com#Antidepressivo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Antidepressivo -->
+
+    <owl:Class rdf:about="http://example.com#Antidepressivo">
+        <rdfs:subClassOf rdf:resource="http://example.com#Medicamento"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#EfeitoTardio"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#UsoContinuo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Comorbidade -->
+
+    <owl:Class rdf:about="http://example.com#Comorbidade">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Curso -->
+
+    <owl:Class rdf:about="http://example.com#Curso">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com#Flutuante"/>
+                    <rdf:Description rdf:about="http://example.com#LongaDuracao"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#TAG"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#TAG"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#DepressaoMaior -->
+
+    <owl:Class rdf:about="http://example.com#DepressaoMaior">
+        <rdfs:subClassOf rdf:resource="http://example.com#TranstornoPsiquiatrico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Diagnostico -->
+
+    <owl:Class rdf:about="http://example.com#Diagnostico">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Relator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://example.com#Paciente"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://example.com#ProfissionalDeSaude"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#TAG"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#DificuldadeDeConcentracao -->
+
+    <owl:Class rdf:about="http://example.com#DificuldadeDeConcentracao">
+        <rdfs:subClassOf rdf:resource="http://example.com#Fisico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Doenca -->
+
+    <owl:Class rdf:about="http://example.com#Doenca">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#EfeitoImediato -->
+
+    <owl:Class rdf:about="http://example.com#EfeitoImediato">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                <owl:someValuesFrom rdf:resource="http://example.com#substancia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:someValuesFrom rdf:resource="http://example.com#Ansiolitico"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#EfeitoTardio -->
+
+    <owl:Class rdf:about="http://example.com#EfeitoTardio">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                <owl:someValuesFrom rdf:resource="http://example.com#substancia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:someValuesFrom rdf:resource="http://example.com#Antidepressivo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Excessiva -->
+
+    <owl:Class rdf:about="http://example.com#Excessiva">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Intensidade"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Ansiedade"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Fatigabilidade -->
+
+    <owl:Class rdf:about="http://example.com#Fatigabilidade">
+        <rdfs:subClassOf rdf:resource="http://example.com#Fisico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Fisico -->
+
+    <owl:Class rdf:about="http://example.com#Fisico">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com#DificuldadeDeConcentracao"/>
+                    <rdf:Description rdf:about="http://example.com#Fatigabilidade"/>
+                    <rdf:Description rdf:about="http://example.com#Inquietacao"/>
+                    <rdf:Description rdf:about="http://example.com#Irritabilidade"/>
+                    <rdf:Description rdf:about="http://example.com#PerturbacaoDeSono"/>
+                    <rdf:Description rdf:about="http://example.com#TensaoMuscular"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Manifestacao"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Flutuante -->
+
+    <owl:Class rdf:about="http://example.com#Flutuante">
+        <rdfs:subClassOf rdf:resource="http://example.com#Curso"/>
+        <owl:disjointWith rdf:resource="http://example.com#LongaDuracao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#FobiaEspecifica -->
+
+    <owl:Class rdf:about="http://example.com#FobiaEspecifica">
+        <rdfs:subClassOf rdf:resource="http://example.com#TranstornoPsiquiatrico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Gatilho -->
+
+    <owl:Class rdf:about="http://example.com#Gatilho">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#wasCreatedIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#TAG"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Pessoal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Inquietacao -->
+
+    <owl:Class rdf:about="http://example.com#Inquietacao">
+        <rdfs:subClassOf rdf:resource="http://example.com#Fisico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Intensidade -->
+
+    <owl:Class rdf:about="http://example.com#Intensidade">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Excessiva"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Irritabilidade -->
+
+    <owl:Class rdf:about="http://example.com#Irritabilidade">
+        <rdfs:subClassOf rdf:resource="http://example.com#Fisico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#LongaDuracao -->
+
+    <owl:Class rdf:about="http://example.com#LongaDuracao">
+        <rdfs:subClassOf rdf:resource="http://example.com#Curso"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Manifestacao -->
+
+    <owl:Class rdf:about="http://example.com#Manifestacao">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Relator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://example.com#Somatico"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Fisico"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Sintoma"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Medicamento -->
+
+    <owl:Class rdf:about="http://example.com#Medicamento">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com#Ansiolitico"/>
+                    <rdf:Description rdf:about="http://example.com#Antidepressivo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:someValuesFrom rdf:resource="http://example.com#Prescricao"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#NaoViciante -->
+
+    <owl:Class rdf:about="http://example.com#NaoViciante">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#historicallyDependsOn"/>
+                <owl:someValuesFrom rdf:resource="http://example.com#substancia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#UsoContinuo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Paciente -->
+
+    <owl:Class rdf:about="http://example.com#Paciente">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Diagnostico"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#PerturbacaoDeSono -->
+
+    <owl:Class rdf:about="http://example.com#PerturbacaoDeSono">
+        <rdfs:subClassOf rdf:resource="http://example.com#Fisico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Pessoal -->
+
+    <owl:Class rdf:about="http://example.com#Pessoal">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Gatilho"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Prescricao -->
+
+    <owl:Class rdf:about="http://example.com#Prescricao">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Relator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://example.com#Medicamento"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://example.com#Psicologico"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://example.com#Tratamento"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#ProfissionalDeSaude -->
+
+    <owl:Class rdf:about="http://example.com#ProfissionalDeSaude">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Diagnostico"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Psicologico -->
+
+    <owl:Class rdf:about="http://example.com#Psicologico">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:someValuesFrom rdf:resource="http://example.com#Prescricao"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Psicoterapia -->
+
+    <owl:Class rdf:about="http://example.com#Psicoterapia">
+        <rdfs:subClassOf rdf:resource="http://example.com#Psicologico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Sintoma -->
+
+    <owl:Class rdf:about="http://example.com#Sintoma">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#historicallyDependsOn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://example.com#Tratamento"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com#causada_por"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://example.com#Doenca"/>
+                                    <rdf:Description rdf:about="http://example.com#substancia"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Manifestacao"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Somatico -->
+
+    <owl:Class rdf:about="http://example.com#Somatico">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:someValuesFrom rdf:resource="http://example.com#Manifestacao"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#TAG -->
+
+    <owl:Class rdf:about="http://example.com#TAG">
+        <rdfs:subClassOf rdf:resource="http://example.com#TranstornoPsiquiatrico"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Diagnostico"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#wasCreatedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Gatilho"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Curso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Curso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#TCC -->
+
+    <owl:Class rdf:about="http://example.com#TCC">
+        <rdfs:subClassOf rdf:resource="http://example.com#Psicoterapia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#TensaoMuscular -->
+
+    <owl:Class rdf:about="http://example.com#TensaoMuscular">
+        <rdfs:subClassOf rdf:resource="http://example.com#Fisico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#TranstornoAnsiedadeSocial -->
+
+    <owl:Class rdf:about="http://example.com#TranstornoAnsiedadeSocial">
+        <rdfs:subClassOf rdf:resource="http://example.com#TranstornoPsiquiatrico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#TranstornoDoPanico -->
+
+    <owl:Class rdf:about="http://example.com#TranstornoDoPanico">
+        <rdfs:subClassOf rdf:resource="http://example.com#TranstornoPsiquiatrico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#TranstornoPsiquiatrico -->
+
+    <owl:Class rdf:about="http://example.com#TranstornoPsiquiatrico">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com#DepressaoMaior"/>
+                    <rdf:Description rdf:about="http://example.com#FobiaEspecifica"/>
+                    <rdf:Description rdf:about="http://example.com#TAG"/>
+                    <rdf:Description rdf:about="http://example.com#TranstornoAnsiedadeSocial"/>
+                    <rdf:Description rdf:about="http://example.com#TranstornoDoPanico"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://example.com#Comorbidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Tratamento -->
+
+    <owl:Class rdf:about="http://example.com#Tratamento">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#historicallyDependsOn"/>
+                <owl:someValuesFrom rdf:resource="http://example.com#Sintoma"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:someValuesFrom rdf:resource="http://example.com#Prescricao"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#UsoContinuo -->
+
+    <owl:Class rdf:about="http://example.com#UsoContinuo">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:someValuesFrom rdf:resource="http://example.com#Antidepressivo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#NaoViciante"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#UsoTemporario -->
+
+    <owl:Class rdf:about="http://example.com#UsoTemporario">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:someValuesFrom rdf:resource="http://example.com#Ansiolitico"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Viciante"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#Viciante -->
+
+    <owl:Class rdf:about="http://example.com#Viciante">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                <owl:someValuesFrom rdf:resource="http://example.com#substancia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:someValuesFrom rdf:resource="http://example.com#Ansiolitico"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#UsoTemporario"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com#substancia -->
+
+    <owl:Class rdf:about="http://example.com#substancia">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#EfeitoImediato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#EfeitoTardio"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#Viciante"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#historicallyDependsOn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.com#NaoViciante"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Category -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Category"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Event -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Event"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#EventType -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#EventType"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#FunctionalComplex -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#IntrinsicMode -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Kind -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Kind"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#MaterialRelationshipType -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Relator -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Relator"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#SubKind -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#SubKind"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com#Acompanha -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Acompanha">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Ansiedade -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Ansiedade">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Ansiolitico -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Ansiolitico">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Antidepressivo -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Antidepressivo">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#BrendaLohanna -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#BrendaLohanna">
+        <rdf:type rdf:resource="http://example.com#Paciente"/>
+        <Apresenta rdf:resource="http://example.com#Sintoma"/>
+        <Sente rdf:resource="http://example.com#Ansiedade"/>
+        <manifestado_como rdf:resource="http://example.com#Somatico"/>
+        <temIdadeDe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</temIdadeDe>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Bromazepam -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Bromazepam">
+        <rdf:type rdf:resource="http://example.com#Ansiolitico"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Clonazepam -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Clonazepam">
+        <rdf:type rdf:resource="http://example.com#Ansiolitico"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#CoIntervencao -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#CoIntervencao">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Com_auxilio -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Com_auxilio">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Comorbidade -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Comorbidade">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Curso -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Curso">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#DepressaoMaior -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#DepressaoMaior">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Diagnostico -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Diagnostico">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#DificuldadeDeConcentracao -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#DificuldadeDeConcentracao">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#EfeitoImediato -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#EfeitoImediato">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#EfeitoTardio -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#EfeitoTardio">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Estazolam -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Estazolam">
+        <rdf:type rdf:resource="http://example.com#Ansiolitico"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Excessiva -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Excessiva">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Fatigabilidade -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Fatigabilidade">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Fisico -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Fisico">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Flutuante -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Flutuante">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#FobiaEspecifica -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#FobiaEspecifica">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Gatilho -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Gatilho">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Inquietacao -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Inquietacao">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Intensidade -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Intensidade">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Irritabilidade -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Irritabilidade">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#JorgeHugo -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#JorgeHugo">
+        <rdf:type rdf:resource="http://example.com#Paciente"/>
+        <Apresenta rdf:resource="http://example.com#Sintoma"/>
+        <Realizado_com rdf:resource="http://example.com#Estazolam"/>
+        <Realizado_com rdf:resource="http://example.com#SSRI"/>
+        <Sente rdf:resource="http://example.com#Ansiedade"/>
+        <diagnosticado_com rdf:resource="http://example.com#TAG"/>
+        <manifestado_como rdf:resource="http://example.com#Fatigabilidade"/>
+        <manifestado_como rdf:resource="http://example.com#Inquietacao"/>
+        <manifestado_como rdf:resource="http://example.com#PerturbacaoDeSono"/>
+        <manifestado_como rdf:resource="http://example.com#TensaoMuscular"/>
+        <realiza_um rdf:resource="http://example.com#Tratamento"/>
+        <gufo:inheresIn rdf:resource="http://example.com#LongaDuracao"/>
+        <temIdadeDe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</temIdadeDe>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://example.com#JorgeHugo"/>
+        <owl:assertionProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+        <owl:targetIndividual rdf:resource="http://example.com#Flutuante"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://example.com#JoseSilva -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#JoseSilva">
+        <rdf:type rdf:resource="http://example.com#Paciente"/>
+        <Apresenta rdf:resource="http://example.com#FobiaEspecifica"/>
+        <Apresenta rdf:resource="http://example.com#Sintoma"/>
+        <Realizado_com rdf:resource="http://example.com#Bromazepam"/>
+        <Realizado_com rdf:resource="http://example.com#SSRI"/>
+        <Sente rdf:resource="http://example.com#Ansiedade"/>
+        <diagnosticado_com rdf:resource="http://example.com#TAG"/>
+        <manifestado_como rdf:resource="http://example.com#Inquietacao"/>
+        <manifestado_como rdf:resource="http://example.com#Irritabilidade"/>
+        <manifestado_como rdf:resource="http://example.com#TensaoMuscular"/>
+        <realiza_um rdf:resource="http://example.com#Tratamento"/>
+        <gufo:inheresIn rdf:resource="http://example.com#Flutuante"/>
+        <gufo:inheresIn rdf:resource="http://example.com#LongaDuracao"/>
+        <temIdadeDe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</temIdadeDe>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#LarissaTrrs -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#LarissaTrrs">
+        <rdf:type rdf:resource="http://example.com#Paciente"/>
+        <Apresenta rdf:resource="http://example.com#Sintoma"/>
+        <Realizado_com rdf:resource="http://example.com#Clonazepam"/>
+        <Realizado_com rdf:resource="http://example.com#SNRI"/>
+        <Sente rdf:resource="http://example.com#Ansiedade"/>
+        <Tem rdf:resource="http://example.com#DepressaoMaior"/>
+        <diagnosticado_com rdf:resource="http://example.com#TAG"/>
+        <manifestado_como rdf:resource="http://example.com#Fatigabilidade"/>
+        <manifestado_como rdf:resource="http://example.com#TensaoMuscular"/>
+        <realiza_um rdf:resource="http://example.com#Tratamento"/>
+        <temIdadeDe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</temIdadeDe>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#LongaDuracao -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#LongaDuracao">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#LuizFelipe -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#LuizFelipe">
+        <rdf:type rdf:resource="http://example.com#Paciente"/>
+        <Apresenta rdf:resource="http://example.com#Sintoma"/>
+        <Sente rdf:resource="http://example.com#Ansiedade"/>
+        <Tem rdf:resource="http://example.com#FobiaEspecifica"/>
+        <manifestado_como rdf:resource="http://example.com#Somatico"/>
+        <temIdadeDe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</temIdadeDe>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Manifestacao -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Manifestacao">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#MarceloSantos -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#MarceloSantos">
+        <rdf:type rdf:resource="http://example.com#ProfissionalDeSaude"/>
+        <Acompanha rdf:resource="http://example.com#JoseSilva"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#MariaCabral -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#MariaCabral">
+        <rdf:type rdf:resource="http://example.com#Paciente"/>
+        <Apresenta rdf:resource="http://example.com#Sintoma"/>
+        <Realizado_com rdf:resource="http://example.com#Clonazepam"/>
+        <Realizado_com rdf:resource="http://example.com#SNRI"/>
+        <Sente rdf:resource="http://example.com#Ansiedade"/>
+        <Tem rdf:resource="http://example.com#TranstornoDoPanico"/>
+        <diagnosticado_com rdf:resource="http://example.com#TAG"/>
+        <manifestado_como rdf:resource="http://example.com#Fatigabilidade"/>
+        <manifestado_como rdf:resource="http://example.com#PerturbacaoDeSono"/>
+        <manifestado_como rdf:resource="http://example.com#Somatico"/>
+        <manifestado_como rdf:resource="http://example.com#TensaoMuscular"/>
+        <realiza_um rdf:resource="http://example.com#Tratamento"/>
+        <temIdadeDe rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</temIdadeDe>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Medicamento -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Medicamento">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#MichaelDouglas -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#MichaelDouglas">
+        <rdf:type rdf:resource="http://example.com#ProfissionalDeSaude"/>
+        <Acompanha rdf:resource="http://example.com#JorgeHugo"/>
+        <Acompanha rdf:resource="http://example.com#MariaCabral"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#NaoViciante -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#NaoViciante">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Ocorre_com -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Ocorre_com">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Paciente -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Paciente">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#PerturbacaoDeSono -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#PerturbacaoDeSono">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Pessoal -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Pessoal">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Prescricao -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Prescricao">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#ProfissionalDeSaude -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#ProfissionalDeSaude">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Psicologico -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Psicologico">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Psicoterapia -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Psicoterapia">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Realizado_com -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Realizado_com">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#SNRI -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#SNRI">
+        <rdf:type rdf:resource="http://example.com#Antidepressivo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#SSRI -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#SSRI">
+        <rdf:type rdf:resource="http://example.com#Antidepressivo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Sintoma -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Sintoma">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Somatico -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Somatico">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#TAG -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#TAG">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#TCC -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#TCC">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#TensaoMuscular -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#TensaoMuscular">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#TranstornoAnsiedadeSocial -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#TranstornoAnsiedadeSocial">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#TranstornoDoPanico -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#TranstornoDoPanico">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#TranstornoPsiquiatrico -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#TranstornoPsiquiatrico">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Tratamento -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Tratamento">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#UsoContinuo -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#UsoContinuo">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#UsoTemporario -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#UsoTemporario">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#Viciante -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#Viciante">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#diagnostica -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#diagnostica">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#diagnosticado_com -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#diagnosticado_com">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#manifestado_como -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#manifestado_como">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#manifestado_como_1 -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#manifestado_como_1">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com#substancia -->
+
+    <owl:NamedIndividual rdf:about="http://example.com#substancia">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://example.com#Acompanha">
+        <rdfs:label xml:lang="en">Acompanha</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Ansiedade">
+        <rdfs:label xml:lang="en">Ansiedade</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Ansiolitico">
+        <rdfs:label xml:lang="en">Ansiolitico</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Antidepressivo">
+        <rdfs:label xml:lang="en">Antidepressivo</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#CoIntervencao">
+        <rdfs:label xml:lang="en">Co-intervencao</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Com_auxilio">
+        <rdfs:label xml:lang="en">Com_auxilio</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Comorbidade">
+        <rdfs:label xml:lang="en">Comorbidade</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Curso">
+        <rdfs:label xml:lang="en">Curso</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#DepressaoMaior">
+        <rdfs:label xml:lang="en">Depressao maior</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Diagnostico">
+        <rdfs:label xml:lang="en">Diagnostico</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#DificuldadeDeConcentracao">
+        <rdfs:label xml:lang="en">Dificuldade de concentracao</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#EfeitoImediato">
+        <rdfs:label xml:lang="en">Efeito imediato</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#EfeitoTardio">
+        <rdfs:label xml:lang="en">Efeito tardio</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Excessiva">
+        <rdfs:label xml:lang="en">Excessiva</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Fatigabilidade">
+        <rdfs:label xml:lang="en">Fatigabilidade</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Fisico">
+        <rdfs:label xml:lang="en">Fisico</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Flutuante">
+        <rdfs:label xml:lang="en">Flutuante</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#FobiaEspecifica">
+        <rdfs:label xml:lang="en">Fobia especifica</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Gatilho">
+        <rdfs:label xml:lang="en">Gatilho</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Inquietacao">
+        <rdfs:label xml:lang="en">Inquietacao</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Intensidade">
+        <rdfs:label xml:lang="en">Intensidade</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Irritabilidade">
+        <rdfs:label xml:lang="en">Irritabilidade</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#LongaDuracao">
+        <rdfs:label xml:lang="en">Longa duracao</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Manifestacao">
+        <rdfs:label xml:lang="en">Manifestacao</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Medicamento">
+        <rdfs:label xml:lang="en">Medicamento</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#NaoViciante">
+        <rdfs:label xml:lang="en">Nao viciante</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Ocorre_com">
+        <rdfs:label xml:lang="en">Ocorre_com</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Paciente">
+        <rdfs:label xml:lang="en">Paciente</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#PerturbacaoDeSono">
+        <rdfs:label xml:lang="en">Perturbacao de sono</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Pessoal">
+        <rdfs:label xml:lang="en">Pessoal</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Prescricao">
+        <rdfs:label xml:lang="en">Prescricao</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#ProfissionalDeSaude">
+        <rdfs:label xml:lang="en">Profissional de Saude</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Psicologico">
+        <rdfs:label xml:lang="en">Psicologico</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Psicoterapia">
+        <rdfs:label xml:lang="en">Psicoterapia</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Realizado_com">
+        <rdfs:label xml:lang="en">Realizado_com</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Sintoma">
+        <rdfs:label xml:lang="en">Sintoma</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Somatico">
+        <rdfs:label xml:lang="en">Somatico</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#TAG">
+        <rdfs:label xml:lang="en">TAG</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#TCC">
+        <rdfs:label xml:lang="en">TCC</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#TensaoMuscular">
+        <rdfs:label xml:lang="en">Tensao muscular</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#TranstornoAnsiedadeSocial">
+        <rdfs:label xml:lang="en">Transtorno ansiedade social</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#TranstornoDoPanico">
+        <rdfs:label xml:lang="en">Transtorno do panico</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#TranstornoPsiquiatrico">
+        <rdfs:label xml:lang="en">Transtorno psiquiatrico</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Tratamento">
+        <rdfs:label xml:lang="en">Tratamento</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#UsoContinuo">
+        <rdfs:label xml:lang="en">Uso Continuo</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#UsoTemporario">
+        <rdfs:label xml:lang="en">UsoTemporario</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#Viciante">
+        <rdfs:label xml:lang="en">Viciante</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#diagnostica">
+        <rdfs:label xml:lang="en">diagnostica</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#diagnosticado_com">
+        <rdfs:label xml:lang="en">diagnosticado_com</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#manifestado_como">
+        <rdfs:label xml:lang="en">manifestado_como</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com#substancia">
+        <rdfs:label xml:lang="en">substancia</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com#DepressaoMaior"/>
+            <rdf:Description rdf:about="http://example.com#FobiaEspecifica"/>
+            <rdf:Description rdf:about="http://example.com#TAG"/>
+            <rdf:Description rdf:about="http://example.com#TranstornoAnsiedadeSocial"/>
+            <rdf:Description rdf:about="http://example.com#TranstornoDoPanico"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com#DificuldadeDeConcentracao"/>
+            <rdf:Description rdf:about="http://example.com#Fatigabilidade"/>
+            <rdf:Description rdf:about="http://example.com#Inquietacao"/>
+            <rdf:Description rdf:about="http://example.com#Irritabilidade"/>
+            <rdf:Description rdf:about="http://example.com#PerturbacaoDeSono"/>
+            <rdf:Description rdf:about="http://example.com#TensaoMuscular"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com#EfeitoImediato"/>
+            <rdf:Description rdf:about="http://example.com#EfeitoTardio"/>
+            <rdf:Description rdf:about="http://example.com#Excessiva"/>
+            <rdf:Description rdf:about="http://example.com#Pessoal"/>
+            <rdf:Description rdf:about="http://example.com#UsoContinuo"/>
+            <rdf:Description rdf:about="http://example.com#UsoTemporario"/>
+            <rdf:Description rdf:about="http://example.com#Viciante"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

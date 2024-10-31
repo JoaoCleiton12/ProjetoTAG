@@ -20,11 +20,11 @@ img.button {position: relative; top: 8px;}
 .exactly {color: #770077;}
 
 div.codebox {overflow: hidden;
-    background: #f1f5f9; width: 95%; padding: 5px;
-    border-width: 1px; border-style: solid; border-color: #c7cfd5;
+    background: #C0C0C0; width: 95%; padding: 5px;
+    border-width: 1px; border-style: solid; border-color: #C0C0C0;
 }
 
-#queryform {background: #ddddff; padding: 5px;}
+#queryform {background: #C0C0C0; padding: 5px;}
 #most_used_classes {text-align: center;}
 
 p.footer {font-size: 8pt; text-align: right;}
@@ -40,3 +40,91 @@ a.subsexpand {color: #555555; font-size: 7pt; text-decoration: underline; line-h
 ul {margin-top: 1px; margin-bottom: 1px; margin-left: 10px; padding-left: 5px;}
 
 ul.minihierarchy {list-style-type: disc;}
+
+.horizontal-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .horizontal-list li {
+    display: inline-block;
+    padding: 5px;
+    margin-right: 10px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+  }
+
+  .horizontal-list a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .codebox {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fafafa;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Estilos específicos para o bloco circulado */
+.content-block {
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #d3d3d3;
+  border-radius: 8px;
+}
+
+/* Estilos para o layout interno */
+.owlselector {
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.codebox {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.horizontal-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.horizontal-list li {
+  flex: 1 1 200px;
+  max-width: 250px;
+  text-align: center;
+  margin: 5px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.horizontal-list a {
+  text-decoration: none;
+  color: #000000;
+}
