@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Ontology Browser</title>
+<meta http-equiv='content-type' content='text/html;charset=UTF-8'>
+<link rel='stylesheet' href='../css/default.css' type='text/css' />
+</head>
+
+<body>
+
+<div id='tabs'>
+<a href='../ontologies/index.html' class='' >Ontologies</a>
+<a href='index.html' class='' >Classes</a>
+<a href='../objectproperties/index.html' class='' >Object Properties</a>
+<a href='../dataproperties/index.html' class='' >Data Properties</a>
+<a href='../annotationproperties/index.html' class='' >Annotation Properties</a>
+<a href='../individuals/index.html' class='' >Individuals</a>
+<a href='../datatypes/index.html' class='' >Datatypes</a>
+<a href='../cloud/' class='' >Clouds</a>
+</div> <!-- tabs -->
+
+
+<div class='summary'><h2>Class: GAD</h2>
+
+<div id='annotations_(1)'>
+<h4>Annotations (1)</h4>
+<div class='codebox'>
+<ul>
+<li class="asserted"><a href="../annotationproperties/label___653429740.html" class='Annotation Property' title="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a> <span class='literal'>"GAD"</span> <span style='color: black;'>@en</span></li>
+</ul>
+</div>
+</div><!-- annotations (1) -->
+
+
+<div id='superclasses_(5)'>
+<h4>Superclasses (5)</h4>
+<div class='codebox'>
+<ul>
+<li class="asserted"><a href="PsychiatricDisorder___-205433869.html" class='Class' title="http://TAG.com#PsychiatricDisorder">PsychiatricDisorder</a></li>
+<li class="asserted"><a href="../objectproperties/mediates___-14664164.html" class='Object Property' title="http://purl.org/nemo/gufo#mediates">mediates</a> <span class='min'>min</span> 1 <a href="Diagnosis___-677903463.html" class='Class' title="http://TAG.com#Diagnosis">Diagnosis</a></li>
+<li class="asserted"><a href="../objectproperties/wasCreatedIn___-1960402526.html" class='Object Property' title="http://purl.org/nemo/gufo#wasCreatedIn">wasCreatedIn</a> <span class='exactly'>exactly</span> 1 <a href="Trigger___1020864096.html" class='Class' title="http://TAG.com#Trigger">Trigger</a></li>
+<li class="asserted"><span class='keyword'>InverseOf</span> <a href="../objectproperties/externallyDependsOn___890258540.html" class='Object Property' title="http://purl.org/nemo/gufo#externallyDependsOn">externallyDependsOn</a> <span class='exactly'>exactly</span> 1 <a href="Course___-1854601981.html" class='Class' title="http://TAG.com#Course">Course</a></li>
+<li class="asserted"><span class='keyword'>InverseOf</span> <a href="../objectproperties/inheresIn___-671409503.html" class='Object Property' title="http://purl.org/nemo/gufo#inheresIn">inheresIn</a> <span class='exactly'>exactly</span> 1 <a href="Course___-1854601981.html" class='Class' title="http://TAG.com#Course">Course</a></li>
+</ul>
+</div>
+</div><!-- superclasses (5) -->
+
+
+<div id='disjoints_(5)'>
+<h4>Disjoints (5)</h4>
+<div class='codebox'>
+<span class="asserted"><span class='Class active-entity'>GAD</span></span>,
+<span class="asserted"><a href="MajorDepression___828658599.html" class='Class' title="http://TAG.com#MajorDepression">MajorDepression</a></span>,
+<span class="asserted"><a href="PanicDisorder___599202751.html" class='Class' title="http://TAG.com#PanicDisorder">PanicDisorder</a></span>,
+<span class="asserted"><a href="SocialAnxietyDisorder___-333261273.html" class='Class' title="http://TAG.com#SocialAnxietyDisorder">SocialAnxietyDisorder</a></span>,
+<span class="asserted"><a href="SpecificPhobia___784920797.html" class='Class' title="http://TAG.com#SpecificPhobia">SpecificPhobia</a></span></div>
+</div><!-- disjoints (5) -->
+
+
+<div id='usage_(8)'>
+<h4>Usage (8)</h4>
+<div class='codebox'>
+<ul>
+<li class="asserted"><a href="PsychiatricDisorder___-205433869.html" class='Class' title="http://TAG.com#PsychiatricDisorder">PsychiatricDisorder</a> <span class='keyword'>&equiv;</span> <a href="SpecificPhobia___784920797.html" class='Class' title="http://TAG.com#SpecificPhobia">SpecificPhobia</a> <span class='keyword'>or</span> <a href="SocialAnxietyDisorder___-333261273.html" class='Class' title="http://TAG.com#SocialAnxietyDisorder">SocialAnxietyDisorder</a> <span class='keyword'>or</span> <a href="PanicDisorder___599202751.html" class='Class' title="http://TAG.com#PanicDisorder">PanicDisorder</a> <span class='keyword'>or</span> <a href="MajorDepression___828658599.html" class='Class' title="http://TAG.com#MajorDepression">MajorDepression</a> <span class='keyword'>or</span> <span class='Class active-entity'>GAD</span></li>
+<li class="asserted"><a href="Course___-1854601981.html" class='Class' title="http://TAG.com#Course">Course</a> <span class='keyword'>&sube;</span> <a href="../objectproperties/externallyDependsOn___890258540.html" class='Object Property' title="http://purl.org/nemo/gufo#externallyDependsOn">externallyDependsOn</a> <span class='min'>min</span> 1 <span class='Class active-entity'>GAD</span></li>
+<li class="asserted"><a href="Course___-1854601981.html" class='Class' title="http://TAG.com#Course">Course</a> <span class='keyword'>&sube;</span> <a href="../objectproperties/inheresIn___-671409503.html" class='Object Property' title="http://purl.org/nemo/gufo#inheresIn">inheresIn</a> <span class='min'>min</span> 1 <span class='Class active-entity'>GAD</span></li>
+<li class="asserted"><a href="Diagnosis___-677903463.html" class='Class' title="http://TAG.com#Diagnosis">Diagnosis</a> <span class='keyword'>&sube;</span> <span class='keyword'>InverseOf</span> <a href="../objectproperties/mediates___-14664164.html" class='Object Property' title="http://purl.org/nemo/gufo#mediates">mediates</a> <span class='exactly'>exactly</span> 1 <span class='Class active-entity'>GAD</span></li>
+<li class="asserted"><a href="Trigger___1020864096.html" class='Class' title="http://TAG.com#Trigger">Trigger</a> <span class='keyword'>&sube;</span> <span class='keyword'>InverseOf</span> <a href="../objectproperties/wasCreatedIn___-1960402526.html" class='Object Property' title="http://purl.org/nemo/gufo#wasCreatedIn">wasCreatedIn</a> <span class='min'>min</span> 2 <span class='Class active-entity'>GAD</span></li>
+<li class="asserted"><a href="../objectproperties/componentOf___-569830276.html" class='Object Property' title="http://TAG.com#componentOf">componentOf</a> <span class='keyword'>Domain</span> <span class='Class active-entity'>GAD</span></li>
+<li class="asserted"><a href="../objectproperties/diagnosed_with___1942980551.html" class='Object Property' title="http://TAG.com#diagnosed_with">diagnosed_with</a> <span class='keyword'>Range</span> <span class='Class active-entity'>GAD</span></li>
+<li class="asserted"><a href="../objectproperties/diagnoses___1613095741.html" class='Object Property' title="http://TAG.com#diagnoses">diagnoses</a> <span class='keyword'>Range</span> <span class='Class active-entity'>GAD</span></li>
+</ul>
+</div>
+</div><!-- usage (8) -->
+
+</div> <!-- summary -->
+<p class='footer'>
+<a href='http://code.google.com/p/ontology-browser/' target='_blank'>OWL HTML inside</a>
+</p>
+</body>
+</html>

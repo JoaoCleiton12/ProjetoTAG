@@ -1,0 +1,1307 @@
+@prefix : <http://TAG.com#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix gufo: <http://purl.org/nemo/gufo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://TAG.com#> .
+
+<http://TAG.com> rdf:type owl:Ontology ;
+                  owl:imports gufo: .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://TAG.com#about
+:about rdf:type owl:ObjectProperty ,
+                owl:AsymmetricProperty ,
+                owl:IrreflexiveProperty ;
+       rdfs:domain :Anxiety ;
+       rdfs:range :Trigger ;
+       rdfs:label "about"@en .
+
+
+###  http://TAG.com#accompanies
+:accompanies rdf:type owl:ObjectProperty ,
+                      owl:AsymmetricProperty ,
+                      owl:IrreflexiveProperty ;
+             rdfs:domain :HealthProfessional ;
+             rdfs:range :Patient .
+
+
+###  http://TAG.com#administered_with_1
+:administered_with_1 rdf:type owl:ObjectProperty ,
+                              owl:AsymmetricProperty ,
+                              owl:IrreflexiveProperty ;
+                     rdfs:domain :Treatment ;
+                     rdfs:range :Medication ,
+                                :Psychological .
+
+
+###  http://TAG.com#caused_by
+:caused_by rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty ,
+                    owl:AsymmetricProperty ,
+                    owl:TransitiveProperty ,
+                    owl:IrreflexiveProperty ;
+           rdfs:domain :Symptom ;
+           rdfs:range :Anxiety ;
+           rdfs:comment """Functional: Because the symptoms cannot be caused by anything other than anxiety (for example, they cannot be caused by substances).
+
+Transitive: If a symptom is caused by anxiety and that anxiety is caused by a trigger, then the symptom is caused by a trigger.""" .
+
+
+###  http://TAG.com#coIntervention
+:coIntervention rdf:type owl:ObjectProperty ,
+                         owl:SymmetricProperty ,
+                         owl:IrreflexiveProperty ;
+                rdfs:domain :Medication ;
+                rdfs:range :Psychological .
+
+
+###  http://TAG.com#coexists_with
+:coexists_with rdf:type owl:ObjectProperty ,
+                        owl:SymmetricProperty ,
+                        owl:IrreflexiveProperty ;
+               rdfs:domain :Neurological ;
+               rdfs:range :Somatic .
+
+
+###  http://TAG.com#componentOf
+:componentOf rdf:type owl:ObjectProperty ,
+                      owl:AsymmetricProperty ,
+                      owl:TransitiveProperty ,
+                      owl:IrreflexiveProperty ;
+             rdfs:domain :GAD ;
+             rdfs:range :Symptom .
+
+
+###  http://TAG.com#diagnosed_with
+:diagnosed_with rdf:type owl:ObjectProperty ,
+                         owl:FunctionalProperty ,
+                         owl:AsymmetricProperty ,
+                         owl:IrreflexiveProperty ;
+                rdfs:domain :Patient ;
+                rdfs:range :GAD .
+
+
+###  http://TAG.com#diagnoses
+:diagnoses rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty ,
+                    owl:AsymmetricProperty ,
+                    owl:IrreflexiveProperty ;
+           rdfs:domain :HealthProfessional ;
+           rdfs:range :GAD .
+
+
+###  http://TAG.com#feel
+:feel rdf:type owl:ObjectProperty ,
+               owl:FunctionalProperty ,
+               owl:AsymmetricProperty ,
+               owl:IrreflexiveProperty ;
+      rdfs:domain :Patient ;
+      rdfs:range :Anxiety .
+
+
+###  http://TAG.com#has
+:has rdf:type owl:ObjectProperty ,
+              owl:AsymmetricProperty ,
+              owl:IrreflexiveProperty ;
+     rdfs:domain :Patient ;
+     rdfs:range :Comorbidity ,
+                :Symptom ;
+     rdfs:label "has"@en .
+
+
+###  http://TAG.com#manifested_as
+:manifested_as rdf:type owl:ObjectProperty ,
+                        owl:AsymmetricProperty ,
+                        owl:IrreflexiveProperty ;
+               rdfs:domain :Symptom ;
+               rdfs:range :Neurological ,
+                          :Somatic .
+
+
+###  http://TAG.com#possesses
+:possesses rdf:type owl:ObjectProperty ,
+                    owl:AsymmetricProperty ,
+                    owl:IrreflexiveProperty ;
+           rdfs:domain :Patient ;
+           rdfs:range :Comorbidity .
+
+
+###  http://TAG.com#receives_a
+:receives_a rdf:type owl:ObjectProperty ,
+                     owl:AsymmetricProperty ,
+                     owl:IrreflexiveProperty ;
+            rdfs:domain :Patient ;
+            rdfs:range :Treatment ;
+            rdfs:label "receives_a"@en .
+
+
+###  http://purl.org/nemo/gufo#externallyDependsOn
+gufo:externallyDependsOn rdf:type owl:ObjectProperty ,
+                                  owl:AsymmetricProperty ,
+                                  owl:IrreflexiveProperty .
+
+
+###  http://purl.org/nemo/gufo#historicallyDependsOn
+gufo:historicallyDependsOn rdf:type owl:ObjectProperty ,
+                                    owl:AsymmetricProperty ,
+                                    owl:IrreflexiveProperty .
+
+
+###  http://purl.org/nemo/gufo#inheresIn
+gufo:inheresIn rdf:type owl:ObjectProperty ,
+                        owl:AsymmetricProperty ,
+                        owl:IrreflexiveProperty .
+
+
+###  http://purl.org/nemo/gufo#mediates
+gufo:mediates rdf:type owl:ObjectProperty ,
+                       owl:SymmetricProperty ,
+                       owl:IrreflexiveProperty .
+
+
+###  http://purl.org/nemo/gufo#wasCreatedIn
+gufo:wasCreatedIn rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://TAG.com#hasAge
+:hasAge rdf:type owl:DatatypeProperty ,
+                 owl:FunctionalProperty ;
+        rdfs:domain :Patient ;
+        rdfs:range xsd:integer .
+
+
+###  http://TAG.com#hasName
+:hasName rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Patient ;
+         rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://TAG.com#Addictive
+:Addictive rdf:type owl:Class ;
+           rdfs:subClassOf gufo:IntrinsicMode ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty gufo:externallyDependsOn ;
+                             owl:someValuesFrom :Substance
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty gufo:inheresIn ;
+                             owl:someValuesFrom :Anxiolytic
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty [ owl:inverseOf gufo:externallyDependsOn
+                                            ] ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :TemporaryUse
+                           ] .
+
+
+###  http://TAG.com#Antidepressant
+:Antidepressant rdf:type owl:Class ;
+                rdfs:subClassOf :Medication ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                                 ] ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :ContinuousUse
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                                 ] ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :LateEffect
+                                ] ;
+                owl:disjointWith :Anxiolytic .
+
+
+###  http://TAG.com#Anxiety
+:Anxiety rdf:type owl:Class ;
+         rdfs:subClassOf gufo:FunctionalComplex ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                          ] ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :Excessive
+                         ] .
+
+
+###  http://TAG.com#Anxiolytic
+:Anxiolytic rdf:type owl:Class ;
+            rdfs:subClassOf :Medication ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                             ] ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Addictive
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                             ] ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :ImmediateEffect
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                             ] ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :TemporaryUse
+                            ] .
+
+
+###  http://TAG.com#Comorbidity
+:Comorbidity rdf:type owl:Class ;
+             rdfs:subClassOf gufo:FunctionalComplex .
+
+
+###  http://TAG.com#ContinuousUse
+:ContinuousUse rdf:type owl:Class ;
+               rdfs:subClassOf gufo:IntrinsicMode ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty gufo:inheresIn ;
+                                 owl:someValuesFrom :Antidepressant
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty gufo:externallyDependsOn ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :NonAddictive
+                               ] .
+
+
+###  http://TAG.com#Course
+:Course rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Class ;
+                              owl:unionOf ( :Floating
+                                            :LongDuration
+                                          )
+                            ] ;
+        rdfs:subClassOf gufo:IntrinsicMode ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty gufo:externallyDependsOn ;
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :GAD
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty gufo:inheresIn ;
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :GAD
+                        ] .
+
+
+###  http://TAG.com#Diagnosis
+:Diagnosis rdf:type owl:Class ;
+           rdfs:subClassOf gufo:Relator ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty [ owl:inverseOf gufo:mediates
+                                            ] ;
+                             owl:someValuesFrom :HealthProfessional
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty [ owl:inverseOf gufo:mediates
+                                            ] ;
+                             owl:someValuesFrom :Patient
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty [ owl:inverseOf gufo:mediates
+                                            ] ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :GAD
+                           ] .
+
+
+###  http://TAG.com#DifficultyConcentrating
+:DifficultyConcentrating rdf:type owl:Class ;
+                         rdfs:subClassOf :Neurological .
+
+
+###  http://TAG.com#DisturbedSleep
+:DisturbedSleep rdf:type owl:Class ;
+                rdfs:subClassOf :Neurological .
+
+
+###  http://TAG.com#Excessive
+:Excessive rdf:type owl:Class ;
+           rdfs:subClassOf gufo:IntrinsicMode ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty gufo:externallyDependsOn ;
+                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :Intensity
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty gufo:inheresIn ;
+                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :Anxiety
+                           ] .
+
+
+###  http://TAG.com#Fatigability
+:Fatigability rdf:type owl:Class ;
+              rdfs:subClassOf :Neurological .
+
+
+###  http://TAG.com#Floating
+:Floating rdf:type owl:Class ;
+          rdfs:subClassOf :Course ;
+          owl:disjointWith :LongDuration .
+
+
+###  http://TAG.com#GAD
+:GAD rdf:type owl:Class ;
+     rdfs:subClassOf :PsychiatricDisorder ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty gufo:mediates ;
+                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                       owl:onClass :Diagnosis
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty gufo:wasCreatedIn ;
+                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                       owl:onClass :Trigger
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty [ owl:inverseOf gufo:externallyDependsOn
+                                      ] ;
+                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                       owl:onClass :Course
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                      ] ;
+                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                       owl:onClass :Course
+                     ] .
+
+
+###  http://TAG.com#HealthProfessional
+:HealthProfessional rdf:type owl:Class ;
+                    rdfs:subClassOf gufo:FunctionalComplex ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty gufo:mediates ;
+                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass :Diagnosis
+                                    ] .
+
+
+###  http://TAG.com#ImmediateEffect
+:ImmediateEffect rdf:type owl:Class ;
+                 rdfs:subClassOf gufo:IntrinsicMode ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty gufo:externallyDependsOn ;
+                                   owl:someValuesFrom :Substance
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty gufo:inheresIn ;
+                                   owl:someValuesFrom :Anxiolytic
+                                 ] .
+
+
+###  http://TAG.com#Intensity
+:Intensity rdf:type owl:Class ;
+           rdfs:subClassOf gufo:FunctionalComplex ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty [ owl:inverseOf gufo:externallyDependsOn
+                                            ] ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :Excessive
+                           ] .
+
+
+###  http://TAG.com#Irritability
+:Irritability rdf:type owl:Class ;
+              rdfs:subClassOf :Neurological .
+
+
+###  http://TAG.com#LateEffect
+:LateEffect rdf:type owl:Class ;
+            rdfs:subClassOf gufo:IntrinsicMode ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty gufo:externallyDependsOn ;
+                              owl:someValuesFrom :Substance
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty gufo:inheresIn ;
+                              owl:someValuesFrom :Antidepressant
+                            ] .
+
+
+###  http://TAG.com#LongDuration
+:LongDuration rdf:type owl:Class ;
+              rdfs:subClassOf :Course .
+
+
+###  http://TAG.com#MajorDepression
+:MajorDepression rdf:type owl:Class ;
+                 rdfs:subClassOf :PsychiatricDisorder .
+
+
+###  http://TAG.com#Manifestation
+:Manifestation rdf:type owl:Class ;
+               rdfs:subClassOf gufo:Relator ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty [ owl:inverseOf gufo:mediates
+                                                ] ;
+                                 owl:someValuesFrom :Somatic
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty [ owl:inverseOf gufo:mediates
+                                                ] ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Neurological
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty [ owl:inverseOf gufo:mediates
+                                                ] ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Symptom
+                               ] .
+
+
+###  http://TAG.com#Medication
+:Medication rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Class ;
+                                  owl:unionOf ( :Antidepressant
+                                                :Anxiolytic
+                                              )
+                                ] ;
+            rdfs:subClassOf gufo:FunctionalComplex ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty gufo:mediates ;
+                              owl:someValuesFrom :Prescription
+                            ] .
+
+
+###  http://TAG.com#MuscleTension
+:MuscleTension rdf:type owl:Class ;
+               rdfs:subClassOf :Somatic .
+
+
+###  http://TAG.com#Neurological
+:Neurological rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:unionOf ( :DifficultyConcentrating
+                                                  :DisturbedSleep
+                                                  :Fatigability
+                                                  :Irritability
+                                                  :Restlessness
+                                                )
+                                  ] ;
+              rdfs:subClassOf gufo:FunctionalComplex ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty gufo:mediates ;
+                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :Manifestation
+                              ] .
+
+
+###  http://TAG.com#NonAddictive
+:NonAddictive rdf:type owl:Class ;
+              rdfs:subClassOf gufo:FunctionalComplex ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty gufo:historicallyDependsOn ;
+                                owl:someValuesFrom :Substance
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty [ owl:inverseOf gufo:externallyDependsOn
+                                               ] ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :ContinuousUse
+                              ] .
+
+
+###  http://TAG.com#PanicDisorder
+:PanicDisorder rdf:type owl:Class ;
+               rdfs:subClassOf :PsychiatricDisorder .
+
+
+###  http://TAG.com#Patient
+:Patient rdf:type owl:Class ;
+         rdfs:subClassOf gufo:FunctionalComplex ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty gufo:mediates ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :Diagnosis
+                         ] .
+
+
+###  http://TAG.com#Personal
+:Personal rdf:type owl:Class ;
+          rdfs:subClassOf gufo:IntrinsicMode ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty gufo:inheresIn ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Trigger
+                          ] .
+
+
+###  http://TAG.com#Prescription
+:Prescription rdf:type owl:Class ;
+              rdfs:subClassOf gufo:Relator ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty [ owl:inverseOf gufo:mediates
+                                               ] ;
+                                owl:someValuesFrom :Medication
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty [ owl:inverseOf gufo:mediates
+                                               ] ;
+                                owl:someValuesFrom :Psychological
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty [ owl:inverseOf gufo:mediates
+                                               ] ;
+                                owl:someValuesFrom :Treatment
+                              ] .
+
+
+###  http://TAG.com#PsychiatricDisorder
+:PsychiatricDisorder rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Class ;
+                                           owl:unionOf ( :GAD
+                                                         :MajorDepression
+                                                         :PanicDisorder
+                                                         :SocialAnxietyDisorder
+                                                         :SpecificPhobia
+                                                       )
+                                         ] ;
+                     rdfs:subClassOf :Comorbidity .
+
+
+###  http://TAG.com#Psychological
+:Psychological rdf:type owl:Class ;
+               rdfs:subClassOf gufo:FunctionalComplex ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty gufo:mediates ;
+                                 owl:someValuesFrom :Prescription
+                               ] .
+
+
+###  http://TAG.com#Psychotherapy
+:Psychotherapy rdf:type owl:Class ;
+               rdfs:subClassOf :Psychological .
+
+
+###  http://TAG.com#Restlessness
+:Restlessness rdf:type owl:Class ;
+              rdfs:subClassOf :Neurological .
+
+
+###  http://TAG.com#SocialAnxietyDisorder
+:SocialAnxietyDisorder rdf:type owl:Class ;
+                       rdfs:subClassOf :PsychiatricDisorder .
+
+
+###  http://TAG.com#Somatic
+:Somatic rdf:type owl:Class ;
+         rdfs:subClassOf gufo:FunctionalComplex ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty gufo:mediates ;
+                           owl:someValuesFrom :Manifestation
+                         ] .
+
+
+###  http://TAG.com#SpecificPhobia
+:SpecificPhobia rdf:type owl:Class ;
+                rdfs:subClassOf :PsychiatricDisorder .
+
+
+###  http://TAG.com#Substance
+:Substance rdf:type owl:Class ;
+           rdfs:subClassOf gufo:FunctionalComplex ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty [ owl:inverseOf gufo:externallyDependsOn
+                                            ] ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :Addictive
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty [ owl:inverseOf gufo:externallyDependsOn
+                                            ] ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :ImmediateEffect
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty [ owl:inverseOf gufo:externallyDependsOn
+                                            ] ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :LateEffect
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty [ owl:inverseOf gufo:historicallyDependsOn
+                                            ] ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :NonAddictive
+                           ] .
+
+
+###  http://TAG.com#Symptom
+:Symptom rdf:type owl:Class ;
+         rdfs:subClassOf gufo:FunctionalComplex ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty [ owl:inverseOf gufo:historicallyDependsOn
+                                          ] ;
+                           owl:someValuesFrom :Treatment
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty gufo:mediates ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :Manifestation
+                         ] .
+
+
+###  http://TAG.com#TemporaryUse
+:TemporaryUse rdf:type owl:Class ;
+              rdfs:subClassOf gufo:IntrinsicMode ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty gufo:inheresIn ;
+                                owl:someValuesFrom :Anxiolytic
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty gufo:externallyDependsOn ;
+                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :Addictive
+                              ] .
+
+
+###  http://TAG.com#Treatment
+:Treatment rdf:type owl:Class ;
+           rdfs:subClassOf gufo:FunctionalComplex ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty gufo:historicallyDependsOn ;
+                             owl:someValuesFrom :Symptom
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty gufo:mediates ;
+                             owl:someValuesFrom :Prescription
+                           ] .
+
+
+###  http://TAG.com#Trigger
+:Trigger rdf:type owl:Class ;
+         rdfs:subClassOf gufo:Event ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty [ owl:inverseOf gufo:wasCreatedIn
+                                          ] ;
+                           owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                           owl:onClass :GAD
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                          ] ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :Personal
+                         ] .
+
+
+###  http://purl.org/nemo/gufo#Category
+gufo:Category rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Event
+gufo:Event rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#EventType
+gufo:EventType rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#FunctionalComplex
+gufo:FunctionalComplex rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#IntrinsicMode
+gufo:IntrinsicMode rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Kind
+gufo:Kind rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#MaterialRelationshipType
+gufo:MaterialRelationshipType rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Relator
+gufo:Relator rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#SubKind
+gufo:SubKind rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://TAG.com#Addictive
+:Addictive rdf:type owl:NamedIndividual ,
+                    gufo:Kind .
+
+
+###  http://TAG.com#Antidepressant
+:Antidepressant rdf:type owl:NamedIndividual ,
+                         gufo:SubKind .
+
+
+###  http://TAG.com#Anxiety
+:Anxiety rdf:type owl:NamedIndividual ,
+                  gufo:Kind .
+
+
+###  http://TAG.com#Anxiolytic
+:Anxiolytic rdf:type owl:NamedIndividual ,
+                     gufo:SubKind .
+
+
+###  http://TAG.com#Bromazepam
+:Bromazepam rdf:type owl:NamedIndividual ,
+                     :Anxiolytic .
+
+
+###  http://TAG.com#Clonazepam
+:Clonazepam rdf:type owl:NamedIndividual ,
+                     :Anxiolytic .
+
+
+###  http://TAG.com#Comorbidity
+:Comorbidity rdf:type owl:NamedIndividual ,
+                      gufo:Category .
+
+
+###  http://TAG.com#ContinuousUse
+:ContinuousUse rdf:type owl:NamedIndividual ,
+                        gufo:Kind .
+
+
+###  http://TAG.com#Course
+:Course rdf:type owl:NamedIndividual ,
+                 gufo:Kind .
+
+
+###  http://TAG.com#Diagnosis
+:Diagnosis rdf:type owl:NamedIndividual ,
+                    gufo:Kind .
+
+
+###  http://TAG.com#DifficultyConcentrating
+:DifficultyConcentrating rdf:type owl:NamedIndividual ,
+                                  gufo:SubKind .
+
+
+###  http://TAG.com#DisturbedSleep
+:DisturbedSleep rdf:type owl:NamedIndividual ,
+                         gufo:SubKind .
+
+
+###  http://TAG.com#Estazolam
+:Estazolam rdf:type owl:NamedIndividual ,
+                    :Anxiolytic .
+
+
+###  http://TAG.com#Excessive
+:Excessive rdf:type owl:NamedIndividual ,
+                    gufo:Kind .
+
+
+###  http://TAG.com#Fatigability
+:Fatigability rdf:type owl:NamedIndividual ,
+                       gufo:SubKind .
+
+
+###  http://TAG.com#Floating
+:Floating rdf:type owl:NamedIndividual ,
+                   gufo:SubKind .
+
+
+###  http://TAG.com#GAD
+:GAD rdf:type owl:NamedIndividual ,
+              gufo:Kind .
+
+
+###  http://TAG.com#HealthProfessional
+:HealthProfessional rdf:type owl:NamedIndividual ,
+                             gufo:Kind .
+
+
+###  http://TAG.com#ImmediateEffect
+:ImmediateEffect rdf:type owl:NamedIndividual ,
+                          gufo:Kind .
+
+
+###  http://TAG.com#Intensity
+:Intensity rdf:type owl:NamedIndividual ,
+                    gufo:Kind .
+
+
+###  http://TAG.com#Irritability
+:Irritability rdf:type owl:NamedIndividual ,
+                       gufo:SubKind .
+
+
+###  http://TAG.com#LateEffect
+:LateEffect rdf:type owl:NamedIndividual ,
+                     gufo:Kind .
+
+
+###  http://TAG.com#LongDuration
+:LongDuration rdf:type owl:NamedIndividual ,
+                       gufo:SubKind .
+
+
+###  http://TAG.com#MajorDepression
+:MajorDepression rdf:type owl:NamedIndividual ,
+                          gufo:Kind .
+
+
+###  http://TAG.com#Manifestation
+:Manifestation rdf:type owl:NamedIndividual ,
+                        gufo:Kind .
+
+
+###  http://TAG.com#MarceloSantos
+:MarceloSantos rdf:type owl:NamedIndividual ,
+                        :HealthProfessional ;
+               :accompanies :Paciente5 .
+
+
+###  http://TAG.com#Medication
+:Medication rdf:type owl:NamedIndividual ,
+                     gufo:Kind .
+
+
+###  http://TAG.com#MichaelDouglas
+:MichaelDouglas rdf:type owl:NamedIndividual ,
+                         :HealthProfessional ;
+                :accompanies :Paciente4 ,
+                             :Paciente6 .
+
+
+###  http://TAG.com#MuscleTension
+:MuscleTension rdf:type owl:NamedIndividual ,
+                        gufo:SubKind .
+
+
+###  http://TAG.com#Neurological
+:Neurological rdf:type owl:NamedIndividual ,
+                       gufo:Kind .
+
+
+###  http://TAG.com#NonAddictive
+:NonAddictive rdf:type owl:NamedIndividual ,
+                       gufo:Kind .
+
+
+###  http://TAG.com#Paciente1
+:Paciente1 rdf:type owl:NamedIndividual ,
+                    :Patient ;
+           :feel :Anxiety ;
+           :has :Symptom ;
+           :manifested_as :Somatic ;
+           :hasAge 21 ;
+           :hasName "BrendaLohanna" .
+
+
+###  http://TAG.com#Paciente2
+:Paciente2 rdf:type owl:NamedIndividual ,
+                    :Patient ;
+           :feel :Anxiety ;
+           :has :Symptom ;
+           :manifested_as :Somatic ;
+           :possesses :SpecificPhobia ;
+           :hasAge 17 ;
+           :hasName "LuizFelipe" .
+
+
+###  http://TAG.com#Paciente3
+:Paciente3 rdf:type owl:NamedIndividual ,
+                    :Patient ;
+           :administered_with_1 :Clonazepam ,
+                                :SNRI ;
+           :diagnosed_with :GAD ;
+           :feel :Anxiety ;
+           :has :MajorDepression ,
+                :Symptom ;
+           :manifested_as :Fatigability ,
+                          :MuscleTension ;
+           :receives_a :Treatment ;
+           :hasAge 18 ;
+           :hasName "LarissaTrrs" .
+
+
+###  http://TAG.com#Paciente4
+:Paciente4 rdf:type owl:NamedIndividual ,
+                    :Patient ;
+           :administered_with_1 :Estazolam ,
+                                :SSRI ;
+           :diagnosed_with :GAD ;
+           :feel :Anxiety ;
+           :has :Symptom ;
+           :manifested_as :DisturbedSleep ,
+                          :Fatigability ,
+                          :MuscleTension ,
+                          :Restlessness ;
+           :receives_a :Treatment ;
+           gufo:inheresIn :LongDuration ;
+           :hasAge 34 ;
+           :hasName "JorgeHugo" .
+
+
+###  http://TAG.com#Paciente5
+:Paciente5 rdf:type owl:NamedIndividual ,
+                    :Patient ;
+           :administered_with_1 :Bromazepam ,
+                                :SSRI ;
+           :diagnosed_with :GAD ;
+           :feel :Anxiety ;
+           :has :Symptom ;
+           :manifested_as :Irritability ,
+                          :MuscleTension ,
+                          :Restlessness ;
+           :possesses :SpecificPhobia ;
+           :receives_a :Treatment ;
+           gufo:inheresIn :Floating ,
+                          :LongDuration ;
+           :hasAge 23 ;
+           :hasName "JoseSilva" .
+
+
+###  http://TAG.com#Paciente6
+:Paciente6 rdf:type owl:NamedIndividual ,
+                    :Patient ;
+           :administered_with_1 :Clonazepam ,
+                                :SNRI ;
+           :diagnosed_with :GAD ;
+           :feel :Anxiety ;
+           :has :Symptom ;
+           :manifested_as :DisturbedSleep ,
+                          :Fatigability ,
+                          :MuscleTension ,
+                          :Somatic ;
+           :possesses :PanicDisorder ;
+           :receives_a :Treatment ;
+           :hasAge 75 ;
+           :hasName "MariaCabral" .
+
+
+###  http://TAG.com#PanicDisorder
+:PanicDisorder rdf:type owl:NamedIndividual ,
+                        gufo:Kind .
+
+
+###  http://TAG.com#Patient
+:Patient rdf:type owl:NamedIndividual ,
+                  gufo:Kind .
+
+
+###  http://TAG.com#Personal
+:Personal rdf:type owl:NamedIndividual ,
+                   gufo:Kind .
+
+
+###  http://TAG.com#Prescription
+:Prescription rdf:type owl:NamedIndividual ,
+                       gufo:Kind .
+
+
+###  http://TAG.com#PsychiatricDisorder
+:PsychiatricDisorder rdf:type owl:NamedIndividual ,
+                              gufo:Category .
+
+
+###  http://TAG.com#Psychological
+:Psychological rdf:type owl:NamedIndividual ,
+                        gufo:Kind .
+
+
+###  http://TAG.com#Psychotherapy
+:Psychotherapy rdf:type owl:NamedIndividual ,
+                        gufo:SubKind .
+
+
+###  http://TAG.com#Restlessness
+:Restlessness rdf:type owl:NamedIndividual ,
+                       gufo:SubKind .
+
+
+###  http://TAG.com#SNRI
+:SNRI rdf:type owl:NamedIndividual ,
+               :Antidepressant .
+
+
+###  http://TAG.com#SSRI
+:SSRI rdf:type owl:NamedIndividual ,
+               :Antidepressant .
+
+
+###  http://TAG.com#SocialAnxietyDisorder
+:SocialAnxietyDisorder rdf:type owl:NamedIndividual ,
+                                gufo:Kind .
+
+
+###  http://TAG.com#Somatic
+:Somatic rdf:type owl:NamedIndividual ,
+                  gufo:Kind .
+
+
+###  http://TAG.com#SpecificPhobia
+:SpecificPhobia rdf:type owl:NamedIndividual ,
+                         gufo:Kind .
+
+
+###  http://TAG.com#Substance
+:Substance rdf:type owl:NamedIndividual ,
+                    gufo:Kind .
+
+
+###  http://TAG.com#Symptom
+:Symptom rdf:type owl:NamedIndividual ,
+                  gufo:Kind .
+
+
+###  http://TAG.com#TemporaryUse
+:TemporaryUse rdf:type owl:NamedIndividual ,
+                       gufo:Kind .
+
+
+###  http://TAG.com#Treatment
+:Treatment rdf:type owl:NamedIndividual ,
+                    gufo:Kind .
+
+
+###  http://TAG.com#Trigger
+:Trigger rdf:type owl:NamedIndividual ,
+                  gufo:EventType .
+
+
+###  http://TAG.com#accompanies
+:accompanies rdf:type owl:NamedIndividual ,
+                      gufo:MaterialRelationshipType .
+
+
+###  http://TAG.com#administered_with
+:administered_with rdf:type owl:NamedIndividual ,
+                            gufo:MaterialRelationshipType .
+
+
+###  http://TAG.com#administered_with_1
+:administered_with_1 rdf:type owl:NamedIndividual ,
+                              gufo:MaterialRelationshipType .
+
+
+###  http://TAG.com#coIntervention
+:coIntervention rdf:type owl:NamedIndividual ,
+                         gufo:MaterialRelationshipType .
+
+
+###  http://TAG.com#coexists_with
+:coexists_with rdf:type owl:NamedIndividual ,
+                        gufo:MaterialRelationshipType .
+
+
+###  http://TAG.com#diagnosed_with
+:diagnosed_with rdf:type owl:NamedIndividual ,
+                         gufo:MaterialRelationshipType .
+
+
+###  http://TAG.com#diagnoses
+:diagnoses rdf:type owl:NamedIndividual ,
+                    gufo:MaterialRelationshipType .
+
+
+###  http://TAG.com#manifested_as
+:manifested_as rdf:type owl:NamedIndividual ,
+                        gufo:MaterialRelationshipType .
+
+
+###  http://TAG.com#manifested_as_1
+:manifested_as_1 rdf:type owl:NamedIndividual ,
+                          gufo:MaterialRelationshipType .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:Addictive rdfs:label "Addictive"@en .
+
+
+:Antidepressant rdfs:label "Antidepressant"@en .
+
+
+:Anxiety rdfs:label "Anxiety"@en .
+
+
+:Anxiolytic rdfs:label "Anxiolytic"@en .
+
+
+:Comorbidity rdfs:label "Comorbidity"@en .
+
+
+:ContinuousUse rdfs:label "ContinuousUse"@en .
+
+
+:Course rdfs:label "Course"@en .
+
+
+:Diagnosis rdfs:label "Diagnosis"@en .
+
+
+:DifficultyConcentrating rdfs:label "DifficultyConcentrating"@en .
+
+
+:DisturbedSleep rdfs:label "Disturbed sleep"@en .
+
+
+:Excessive rdfs:label "Excessive"@en .
+
+
+:Fatigability rdfs:label "Fatigability"@en .
+
+
+:Floating rdfs:label "Floating"@en .
+
+
+:GAD rdfs:label "GAD"@en .
+
+
+:HealthProfessional rdfs:label "HealthProfessional"@en .
+
+
+:ImmediateEffect rdfs:label "ImmediateEffect"@en .
+
+
+:Intensity rdfs:label "Intensity"@en .
+
+
+:Irritability rdfs:label "Irritability"@en .
+
+
+:LateEffect rdfs:label "LateEffect"@en .
+
+
+:LongDuration rdfs:label "LongDuration"@en .
+
+
+:MajorDepression rdfs:label "MajorDepression"@en .
+
+
+:Manifestation rdfs:label "Manifestation"@en .
+
+
+:Medication rdfs:label "Medication"@en .
+
+
+:MuscleTension rdfs:label "MuscleTension"@en .
+
+
+:Neurological rdfs:label "Neurological"@en .
+
+
+:NonAddictive rdfs:label "NonAddictive"@en .
+
+
+:PanicDisorder rdfs:label "PanicDisorder"@en .
+
+
+:Patient rdfs:label "Patient"@en .
+
+
+:Personal rdfs:label "Personal"@en .
+
+
+:Prescription rdfs:label "Prescription"@en .
+
+
+:PsychiatricDisorder rdfs:label "PsychiatricDisorder"@en .
+
+
+:Psychological rdfs:label "Psychological"@en .
+
+
+:Psychotherapy rdfs:label "Psychotherapy"@en .
+
+
+:Restlessness rdfs:label "Restlessness"@en .
+
+
+:SocialAnxietyDisorder rdfs:label "SocialAnxietyDisorder"@en .
+
+
+:Somatic rdfs:label "Somatic"@en .
+
+
+:SpecificPhobia rdfs:label "Specific Phobia"@en .
+
+
+:Substance rdfs:label "Substance"@en .
+
+
+:Symptom rdfs:label "Symptom"@en .
+
+
+:TemporaryUse rdfs:label "TemporaryUse"@en .
+
+
+:Treatment rdfs:label "Treatment"@en .
+
+
+:Trigger rdfs:label "Trigger"@en .
+
+
+:accompanies rdfs:label "accompanies"@en .
+
+
+:administered_with_1 rdfs:label "administered_with"@en .
+
+
+:coIntervention rdfs:label "co-intervention"@en .
+
+
+:coexists_with rdfs:label "coexists_with"@en .
+
+
+:diagnosed_with rdfs:label "diagnosed_with"@en .
+
+
+:diagnoses rdfs:label "diagnoses"@en .
+
+
+:manifested_as rdfs:label "manifested_as"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DifficultyConcentrating
+                :DisturbedSleep
+                :Fatigability
+                :Irritability
+                :Restlessness
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :GAD
+                :MajorDepression
+                :PanicDisorder
+                :SocialAnxietyDisorder
+                :SpecificPhobia
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

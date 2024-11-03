@@ -1,0 +1,2203 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://TAG.com"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://TAG.com">
+    <Prefix name="" IRI="http://TAG.com#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="gufo" IRI="http://purl.org/nemo/gufo#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.org/nemo/gufo#</Import>
+    <Declaration>
+        <Class IRI="#Addictive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Antidepressant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Anxiety"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Anxiolytic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Comorbidity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ContinuousUse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Course"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Diagnosis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DifficultyConcentrating"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DisturbedSleep"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Excessive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fatigability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Floating"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GAD"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HealthProfessional"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ImmediateEffect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Intensity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Irritability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LateEffect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LongDuration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MajorDepression"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Manifestation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Medication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MuscleTension"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Neurological"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonAddictive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PanicDisorder"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Patient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Personal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Prescription"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PsychiatricDisorder"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Psychological"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Psychotherapy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Restlessness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialAnxietyDisorder"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Somatic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpecificPhobia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Substance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Symptom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TemporaryUse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Treatment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Trigger"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:Category"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:Event"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:EventType"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:IntrinsicMode"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:Kind"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:MaterialRelationshipType"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:Relator"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#about"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#accompanies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#administered_with_1"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#caused_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#coIntervention"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#coexists_with"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#componentOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#diagnosed_with"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#diagnoses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#feel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#manifested_as"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#possesses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#receives_a"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="gufo:externallyDependsOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="gufo:historicallyDependsOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="gufo:wasCreatedIn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAge"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Addictive"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Antidepressant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Anxiety"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Anxiolytic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bromazepam"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Clonazepam"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Comorbidity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ContinuousUse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Course"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Diagnosis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DifficultyConcentrating"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DisturbedSleep"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estazolam"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Excessive"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fatigability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Floating"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GAD"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HealthProfessional"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ImmediateEffect"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Intensity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Irritability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LateEffect"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LongDuration"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MajorDepression"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Manifestation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MarceloSantos"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Medication"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MichaelDouglas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MuscleTension"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Neurological"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NonAddictive"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Paciente1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Paciente2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Paciente3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Paciente4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Paciente5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Paciente6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PanicDisorder"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Patient"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Personal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prescription"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PsychiatricDisorder"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Psychological"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Psychotherapy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Restlessness"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SNRI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SSRI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SocialAnxietyDisorder"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Somatic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SpecificPhobia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Substance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Symptom"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TemporaryUse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Treatment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Trigger"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#accompanies"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#administered_with"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#administered_with_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#coIntervention"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#coexists_with"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#diagnosed_with"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#diagnoses"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#manifested_as"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#manifested_as_1"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Course"/>
+        <ObjectUnionOf>
+            <Class IRI="#Floating"/>
+            <Class IRI="#LongDuration"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Medication"/>
+        <ObjectUnionOf>
+            <Class IRI="#Antidepressant"/>
+            <Class IRI="#Anxiolytic"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Neurological"/>
+        <ObjectUnionOf>
+            <Class IRI="#DifficultyConcentrating"/>
+            <Class IRI="#DisturbedSleep"/>
+            <Class IRI="#Fatigability"/>
+            <Class IRI="#Irritability"/>
+            <Class IRI="#Restlessness"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PsychiatricDisorder"/>
+        <ObjectUnionOf>
+            <Class IRI="#GAD"/>
+            <Class IRI="#MajorDepression"/>
+            <Class IRI="#PanicDisorder"/>
+            <Class IRI="#SocialAnxietyDisorder"/>
+            <Class IRI="#SpecificPhobia"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Addictive"/>
+        <Class abbreviatedIRI="gufo:IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Addictive"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="gufo:externallyDependsOn"/>
+            <Class IRI="#Substance"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Addictive"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="#Anxiolytic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Addictive"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:externallyDependsOn"/>
+            </ObjectInverseOf>
+            <Class IRI="#TemporaryUse"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Antidepressant"/>
+        <Class IRI="#Medication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Antidepressant"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
+            <Class IRI="#ContinuousUse"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Antidepressant"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
+            <Class IRI="#LateEffect"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anxiety"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anxiety"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
+            <Class IRI="#Excessive"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anxiolytic"/>
+        <Class IRI="#Medication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anxiolytic"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
+            <Class IRI="#Addictive"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anxiolytic"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
+            <Class IRI="#ImmediateEffect"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Anxiolytic"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
+            <Class IRI="#TemporaryUse"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Comorbidity"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ContinuousUse"/>
+        <Class abbreviatedIRI="gufo:IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ContinuousUse"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="#Antidepressant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ContinuousUse"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:externallyDependsOn"/>
+            <Class IRI="#NonAddictive"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Course"/>
+        <Class abbreviatedIRI="gufo:IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Course"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:externallyDependsOn"/>
+            <Class IRI="#GAD"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Course"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="#GAD"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diagnosis"/>
+        <Class abbreviatedIRI="gufo:Relator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diagnosis"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="#HealthProfessional"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diagnosis"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="#Patient"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Diagnosis"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="#GAD"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DifficultyConcentrating"/>
+        <Class IRI="#Neurological"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DisturbedSleep"/>
+        <Class IRI="#Neurological"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Excessive"/>
+        <Class abbreviatedIRI="gufo:IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Excessive"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:externallyDependsOn"/>
+            <Class IRI="#Intensity"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Excessive"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="#Anxiety"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fatigability"/>
+        <Class IRI="#Neurological"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Floating"/>
+        <Class IRI="#Course"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GAD"/>
+        <Class IRI="#PsychiatricDisorder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GAD"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="#Diagnosis"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GAD"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:wasCreatedIn"/>
+            <Class IRI="#Trigger"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GAD"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:externallyDependsOn"/>
+            </ObjectInverseOf>
+            <Class IRI="#Course"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GAD"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
+            <Class IRI="#Course"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HealthProfessional"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HealthProfessional"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="#Diagnosis"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImmediateEffect"/>
+        <Class abbreviatedIRI="gufo:IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImmediateEffect"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="gufo:externallyDependsOn"/>
+            <Class IRI="#Substance"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImmediateEffect"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="#Anxiolytic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intensity"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intensity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:externallyDependsOn"/>
+            </ObjectInverseOf>
+            <Class IRI="#Excessive"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Irritability"/>
+        <Class IRI="#Neurological"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LateEffect"/>
+        <Class abbreviatedIRI="gufo:IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LateEffect"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="gufo:externallyDependsOn"/>
+            <Class IRI="#Substance"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LateEffect"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="#Antidepressant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LongDuration"/>
+        <Class IRI="#Course"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MajorDepression"/>
+        <Class IRI="#PsychiatricDisorder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Manifestation"/>
+        <Class abbreviatedIRI="gufo:Relator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Manifestation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="#Somatic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Manifestation"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="#Neurological"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Manifestation"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="#Symptom"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Medication"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Medication"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="#Prescription"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MuscleTension"/>
+        <Class IRI="#Somatic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Neurological"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Neurological"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="#Manifestation"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonAddictive"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonAddictive"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="gufo:historicallyDependsOn"/>
+            <Class IRI="#Substance"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonAddictive"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:externallyDependsOn"/>
+            </ObjectInverseOf>
+            <Class IRI="#ContinuousUse"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PanicDisorder"/>
+        <Class IRI="#PsychiatricDisorder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Patient"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Patient"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="#Diagnosis"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Personal"/>
+        <Class abbreviatedIRI="gufo:IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Personal"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="#Trigger"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Prescription"/>
+        <Class abbreviatedIRI="gufo:Relator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Prescription"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="#Medication"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Prescription"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="#Psychological"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Prescription"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="#Treatment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PsychiatricDisorder"/>
+        <Class IRI="#Comorbidity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Psychological"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Psychological"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="#Prescription"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Psychotherapy"/>
+        <Class IRI="#Psychological"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Restlessness"/>
+        <Class IRI="#Neurological"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialAnxietyDisorder"/>
+        <Class IRI="#PsychiatricDisorder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Somatic"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Somatic"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="#Manifestation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpecificPhobia"/>
+        <Class IRI="#PsychiatricDisorder"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Substance"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Substance"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:externallyDependsOn"/>
+            </ObjectInverseOf>
+            <Class IRI="#Addictive"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Substance"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:externallyDependsOn"/>
+            </ObjectInverseOf>
+            <Class IRI="#ImmediateEffect"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Substance"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:externallyDependsOn"/>
+            </ObjectInverseOf>
+            <Class IRI="#LateEffect"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Substance"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:historicallyDependsOn"/>
+            </ObjectInverseOf>
+            <Class IRI="#NonAddictive"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Symptom"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Symptom"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:historicallyDependsOn"/>
+            </ObjectInverseOf>
+            <Class IRI="#Treatment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Symptom"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="#Manifestation"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TemporaryUse"/>
+        <Class abbreviatedIRI="gufo:IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TemporaryUse"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="#Anxiolytic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TemporaryUse"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:externallyDependsOn"/>
+            <Class IRI="#Addictive"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Treatment"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Treatment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="gufo:historicallyDependsOn"/>
+            <Class IRI="#Symptom"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Treatment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="#Prescription"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trigger"/>
+        <Class abbreviatedIRI="gufo:Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trigger"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:wasCreatedIn"/>
+            </ObjectInverseOf>
+            <Class IRI="#GAD"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trigger"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
+            <Class IRI="#Personal"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Antidepressant"/>
+        <Class IRI="#Anxiolytic"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DifficultyConcentrating"/>
+        <Class IRI="#DisturbedSleep"/>
+        <Class IRI="#Fatigability"/>
+        <Class IRI="#Irritability"/>
+        <Class IRI="#Restlessness"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Floating"/>
+        <Class IRI="#LongDuration"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GAD"/>
+        <Class IRI="#MajorDepression"/>
+        <Class IRI="#PanicDisorder"/>
+        <Class IRI="#SocialAnxietyDisorder"/>
+        <Class IRI="#SpecificPhobia"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Addictive"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Antidepressant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Anxiety"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Anxiolytic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Anxiolytic"/>
+        <NamedIndividual IRI="#Bromazepam"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Anxiolytic"/>
+        <NamedIndividual IRI="#Clonazepam"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Category"/>
+        <NamedIndividual IRI="#Comorbidity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#ContinuousUse"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Course"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Diagnosis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#DifficultyConcentrating"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#DisturbedSleep"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Anxiolytic"/>
+        <NamedIndividual IRI="#Estazolam"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Excessive"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Fatigability"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Floating"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#GAD"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#HealthProfessional"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#ImmediateEffect"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Intensity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Irritability"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#LateEffect"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#LongDuration"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#MajorDepression"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Manifestation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HealthProfessional"/>
+        <NamedIndividual IRI="#MarceloSantos"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Medication"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HealthProfessional"/>
+        <NamedIndividual IRI="#MichaelDouglas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#MuscleTension"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Neurological"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#NonAddictive"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Patient"/>
+        <NamedIndividual IRI="#Paciente1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Patient"/>
+        <NamedIndividual IRI="#Paciente2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Patient"/>
+        <NamedIndividual IRI="#Paciente3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Patient"/>
+        <NamedIndividual IRI="#Paciente4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Patient"/>
+        <NamedIndividual IRI="#Paciente5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Patient"/>
+        <NamedIndividual IRI="#Paciente6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#PanicDisorder"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Patient"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Personal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Prescription"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Category"/>
+        <NamedIndividual IRI="#PsychiatricDisorder"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Psychological"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Psychotherapy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Restlessness"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Antidepressant"/>
+        <NamedIndividual IRI="#SNRI"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Antidepressant"/>
+        <NamedIndividual IRI="#SSRI"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#SocialAnxietyDisorder"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Somatic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#SpecificPhobia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Substance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Symptom"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#TemporaryUse"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Treatment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:EventType"/>
+        <NamedIndividual IRI="#Trigger"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:MaterialRelationshipType"/>
+        <NamedIndividual IRI="#accompanies"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:MaterialRelationshipType"/>
+        <NamedIndividual IRI="#administered_with"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:MaterialRelationshipType"/>
+        <NamedIndividual IRI="#administered_with_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:MaterialRelationshipType"/>
+        <NamedIndividual IRI="#coIntervention"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:MaterialRelationshipType"/>
+        <NamedIndividual IRI="#coexists_with"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:MaterialRelationshipType"/>
+        <NamedIndividual IRI="#diagnosed_with"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:MaterialRelationshipType"/>
+        <NamedIndividual IRI="#diagnoses"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:MaterialRelationshipType"/>
+        <NamedIndividual IRI="#manifested_as"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:MaterialRelationshipType"/>
+        <NamedIndividual IRI="#manifested_as_1"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#accompanies"/>
+        <NamedIndividual IRI="#MarceloSantos"/>
+        <NamedIndividual IRI="#Paciente5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#accompanies"/>
+        <NamedIndividual IRI="#MichaelDouglas"/>
+        <NamedIndividual IRI="#Paciente4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#accompanies"/>
+        <NamedIndividual IRI="#MichaelDouglas"/>
+        <NamedIndividual IRI="#Paciente6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feel"/>
+        <NamedIndividual IRI="#Paciente1"/>
+        <NamedIndividual IRI="#Anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Paciente1"/>
+        <NamedIndividual IRI="#Symptom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#manifested_as"/>
+        <NamedIndividual IRI="#Paciente1"/>
+        <NamedIndividual IRI="#Somatic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feel"/>
+        <NamedIndividual IRI="#Paciente2"/>
+        <NamedIndividual IRI="#Anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Paciente2"/>
+        <NamedIndividual IRI="#Symptom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#manifested_as"/>
+        <NamedIndividual IRI="#Paciente2"/>
+        <NamedIndividual IRI="#Somatic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possesses"/>
+        <NamedIndividual IRI="#Paciente2"/>
+        <NamedIndividual IRI="#SpecificPhobia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#administered_with_1"/>
+        <NamedIndividual IRI="#Paciente3"/>
+        <NamedIndividual IRI="#Clonazepam"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#administered_with_1"/>
+        <NamedIndividual IRI="#Paciente3"/>
+        <NamedIndividual IRI="#SNRI"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#diagnosed_with"/>
+        <NamedIndividual IRI="#Paciente3"/>
+        <NamedIndividual IRI="#GAD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feel"/>
+        <NamedIndividual IRI="#Paciente3"/>
+        <NamedIndividual IRI="#Anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Paciente3"/>
+        <NamedIndividual IRI="#MajorDepression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Paciente3"/>
+        <NamedIndividual IRI="#Symptom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#manifested_as"/>
+        <NamedIndividual IRI="#Paciente3"/>
+        <NamedIndividual IRI="#Fatigability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#manifested_as"/>
+        <NamedIndividual IRI="#Paciente3"/>
+        <NamedIndividual IRI="#MuscleTension"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#receives_a"/>
+        <NamedIndividual IRI="#Paciente3"/>
+        <NamedIndividual IRI="#Treatment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#administered_with_1"/>
+        <NamedIndividual IRI="#Paciente4"/>
+        <NamedIndividual IRI="#Estazolam"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#administered_with_1"/>
+        <NamedIndividual IRI="#Paciente4"/>
+        <NamedIndividual IRI="#SSRI"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#diagnosed_with"/>
+        <NamedIndividual IRI="#Paciente4"/>
+        <NamedIndividual IRI="#GAD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feel"/>
+        <NamedIndividual IRI="#Paciente4"/>
+        <NamedIndividual IRI="#Anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Paciente4"/>
+        <NamedIndividual IRI="#Symptom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#manifested_as"/>
+        <NamedIndividual IRI="#Paciente4"/>
+        <NamedIndividual IRI="#DisturbedSleep"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#manifested_as"/>
+        <NamedIndividual IRI="#Paciente4"/>
+        <NamedIndividual IRI="#Fatigability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#manifested_as"/>
+        <NamedIndividual IRI="#Paciente4"/>
+        <NamedIndividual IRI="#MuscleTension"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#manifested_as"/>
+        <NamedIndividual IRI="#Paciente4"/>
+        <NamedIndividual IRI="#Restlessness"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#receives_a"/>
+        <NamedIndividual IRI="#Paciente4"/>
+        <NamedIndividual IRI="#Treatment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+        <NamedIndividual IRI="#Paciente4"/>
+        <NamedIndividual IRI="#LongDuration"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#administered_with_1"/>
+        <NamedIndividual IRI="#Paciente5"/>
+        <NamedIndividual IRI="#Bromazepam"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#administered_with_1"/>
+        <NamedIndividual IRI="#Paciente5"/>
+        <NamedIndividual IRI="#SSRI"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#diagnosed_with"/>
+        <NamedIndividual IRI="#Paciente5"/>
+        <NamedIndividual IRI="#GAD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feel"/>
+        <NamedIndividual IRI="#Paciente5"/>
+        <NamedIndividual IRI="#Anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Paciente5"/>
+        <NamedIndividual IRI="#Symptom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#manifested_as"/>
+        <NamedIndividual IRI="#Paciente5"/>
+        <NamedIndividual IRI="#Irritability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#manifested_as"/>
+        <NamedIndividual IRI="#Paciente5"/>
+        <NamedIndividual IRI="#MuscleTension"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#manifested_as"/>
+        <NamedIndividual IRI="#Paciente5"/>
+        <NamedIndividual IRI="#Restlessness"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possesses"/>
+        <NamedIndividual IRI="#Paciente5"/>
+        <NamedIndividual IRI="#SpecificPhobia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#receives_a"/>
+        <NamedIndividual IRI="#Paciente5"/>
+        <NamedIndividual IRI="#Treatment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+        <NamedIndividual IRI="#Paciente5"/>
+        <NamedIndividual IRI="#Floating"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+        <NamedIndividual IRI="#Paciente5"/>
+        <NamedIndividual IRI="#LongDuration"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#administered_with_1"/>
+        <NamedIndividual IRI="#Paciente6"/>
+        <NamedIndividual IRI="#Clonazepam"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#administered_with_1"/>
+        <NamedIndividual IRI="#Paciente6"/>
+        <NamedIndividual IRI="#SNRI"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#diagnosed_with"/>
+        <NamedIndividual IRI="#Paciente6"/>
+        <NamedIndividual IRI="#GAD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feel"/>
+        <NamedIndividual IRI="#Paciente6"/>
+        <NamedIndividual IRI="#Anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#Paciente6"/>
+        <NamedIndividual IRI="#Symptom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#manifested_as"/>
+        <NamedIndividual IRI="#Paciente6"/>
+        <NamedIndividual IRI="#DisturbedSleep"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#manifested_as"/>
+        <NamedIndividual IRI="#Paciente6"/>
+        <NamedIndividual IRI="#Fatigability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#manifested_as"/>
+        <NamedIndividual IRI="#Paciente6"/>
+        <NamedIndividual IRI="#MuscleTension"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#manifested_as"/>
+        <NamedIndividual IRI="#Paciente6"/>
+        <NamedIndividual IRI="#Somatic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possesses"/>
+        <NamedIndividual IRI="#Paciente6"/>
+        <NamedIndividual IRI="#PanicDisorder"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#receives_a"/>
+        <NamedIndividual IRI="#Paciente6"/>
+        <NamedIndividual IRI="#Treatment"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAge"/>
+        <NamedIndividual IRI="#Paciente1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">21</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Paciente1"/>
+        <Literal>BrendaLohanna</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAge"/>
+        <NamedIndividual IRI="#Paciente2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Paciente2"/>
+        <Literal>LuizFelipe</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAge"/>
+        <NamedIndividual IRI="#Paciente3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">18</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Paciente3"/>
+        <Literal>LarissaTrrs</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAge"/>
+        <NamedIndividual IRI="#Paciente4"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">34</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Paciente4"/>
+        <Literal>JorgeHugo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAge"/>
+        <NamedIndividual IRI="#Paciente5"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">23</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Paciente5"/>
+        <Literal>JoseSilva</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAge"/>
+        <NamedIndividual IRI="#Paciente6"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">75</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Paciente6"/>
+        <Literal>MariaCabral</Literal>
+    </DataPropertyAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#caused_by"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#diagnosed_with"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#diagnoses"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#feel"/>
+    </FunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#coIntervention"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#coexists_with"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+    </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#about"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#accompanies"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#administered_with_1"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#caused_by"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#componentOf"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#diagnosed_with"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#diagnoses"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#feel"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#has"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#manifested_as"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#possesses"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#receives_a"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty abbreviatedIRI="gufo:externallyDependsOn"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty abbreviatedIRI="gufo:historicallyDependsOn"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+    </AsymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#caused_by"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#componentOf"/>
+    </TransitiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#about"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#accompanies"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#administered_with_1"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#caused_by"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#coIntervention"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#coexists_with"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#componentOf"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#diagnosed_with"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#diagnoses"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#feel"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#has"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#manifested_as"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#possesses"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#receives_a"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty abbreviatedIRI="gufo:externallyDependsOn"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty abbreviatedIRI="gufo:historicallyDependsOn"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#about"/>
+        <Class IRI="#Anxiety"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#accompanies"/>
+        <Class IRI="#HealthProfessional"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#administered_with_1"/>
+        <Class IRI="#Treatment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#caused_by"/>
+        <Class IRI="#Symptom"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#coIntervention"/>
+        <Class IRI="#Medication"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#coexists_with"/>
+        <Class IRI="#Neurological"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#componentOf"/>
+        <Class IRI="#GAD"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#diagnosed_with"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#diagnoses"/>
+        <Class IRI="#HealthProfessional"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#feel"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#manifested_as"/>
+        <Class IRI="#Symptom"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#possesses"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#receives_a"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#about"/>
+        <Class IRI="#Trigger"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#accompanies"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#administered_with_1"/>
+        <Class IRI="#Medication"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#administered_with_1"/>
+        <Class IRI="#Psychological"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#caused_by"/>
+        <Class IRI="#Anxiety"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#coIntervention"/>
+        <Class IRI="#Psychological"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#coexists_with"/>
+        <Class IRI="#Somatic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#componentOf"/>
+        <Class IRI="#Symptom"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#diagnosed_with"/>
+        <Class IRI="#GAD"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#diagnoses"/>
+        <Class IRI="#GAD"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#feel"/>
+        <Class IRI="#Anxiety"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has"/>
+        <Class IRI="#Comorbidity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has"/>
+        <Class IRI="#Symptom"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#manifested_as"/>
+        <Class IRI="#Neurological"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#manifested_as"/>
+        <Class IRI="#Somatic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#possesses"/>
+        <Class IRI="#Comorbidity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#receives_a"/>
+        <Class IRI="#Treatment"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasAge"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAge"/>
+        <Class IRI="#Patient"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasName"/>
+        <Class IRI="#Patient"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAge"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Addictive</IRI>
+        <Literal xml:lang="en">Addictive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Antidepressant</IRI>
+        <Literal xml:lang="en">Antidepressant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Anxiety</IRI>
+        <Literal xml:lang="en">Anxiety</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Anxiolytic</IRI>
+        <Literal xml:lang="en">Anxiolytic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Comorbidity</IRI>
+        <Literal xml:lang="en">Comorbidity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ContinuousUse</IRI>
+        <Literal xml:lang="en">ContinuousUse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Course</IRI>
+        <Literal xml:lang="en">Course</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Diagnosis</IRI>
+        <Literal xml:lang="en">Diagnosis</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DifficultyConcentrating</IRI>
+        <Literal xml:lang="en">DifficultyConcentrating</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DisturbedSleep</IRI>
+        <Literal xml:lang="en">Disturbed sleep</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Excessive</IRI>
+        <Literal xml:lang="en">Excessive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fatigability</IRI>
+        <Literal xml:lang="en">Fatigability</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Floating</IRI>
+        <Literal xml:lang="en">Floating</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GAD</IRI>
+        <Literal xml:lang="en">GAD</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HealthProfessional</IRI>
+        <Literal xml:lang="en">HealthProfessional</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ImmediateEffect</IRI>
+        <Literal xml:lang="en">ImmediateEffect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Intensity</IRI>
+        <Literal xml:lang="en">Intensity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Irritability</IRI>
+        <Literal xml:lang="en">Irritability</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LateEffect</IRI>
+        <Literal xml:lang="en">LateEffect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LongDuration</IRI>
+        <Literal xml:lang="en">LongDuration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MajorDepression</IRI>
+        <Literal xml:lang="en">MajorDepression</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Manifestation</IRI>
+        <Literal xml:lang="en">Manifestation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Medication</IRI>
+        <Literal xml:lang="en">Medication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MuscleTension</IRI>
+        <Literal xml:lang="en">MuscleTension</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Neurological</IRI>
+        <Literal xml:lang="en">Neurological</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NonAddictive</IRI>
+        <Literal xml:lang="en">NonAddictive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PanicDisorder</IRI>
+        <Literal xml:lang="en">PanicDisorder</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Patient</IRI>
+        <Literal xml:lang="en">Patient</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Personal</IRI>
+        <Literal xml:lang="en">Personal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Prescription</IRI>
+        <Literal xml:lang="en">Prescription</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PsychiatricDisorder</IRI>
+        <Literal xml:lang="en">PsychiatricDisorder</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Psychological</IRI>
+        <Literal xml:lang="en">Psychological</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Psychotherapy</IRI>
+        <Literal xml:lang="en">Psychotherapy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Restlessness</IRI>
+        <Literal xml:lang="en">Restlessness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SocialAnxietyDisorder</IRI>
+        <Literal xml:lang="en">SocialAnxietyDisorder</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Somatic</IRI>
+        <Literal xml:lang="en">Somatic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SpecificPhobia</IRI>
+        <Literal xml:lang="en">Specific Phobia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Substance</IRI>
+        <Literal xml:lang="en">Substance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Symptom</IRI>
+        <Literal xml:lang="en">Symptom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TemporaryUse</IRI>
+        <Literal xml:lang="en">TemporaryUse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Treatment</IRI>
+        <Literal xml:lang="en">Treatment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Trigger</IRI>
+        <Literal xml:lang="en">Trigger</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#about</IRI>
+        <Literal xml:lang="en">about</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#accompanies</IRI>
+        <Literal xml:lang="en">accompanies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#administered_with_1</IRI>
+        <Literal xml:lang="en">administered_with</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#caused_by</IRI>
+        <Literal>Functional: Because the symptoms cannot be caused by anything other than anxiety (for example, they cannot be caused by substances).
+
+Transitive: If a symptom is caused by anxiety and that anxiety is caused by a trigger, then the symptom is caused by a trigger.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#coIntervention</IRI>
+        <Literal xml:lang="en">co-intervention</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#coexists_with</IRI>
+        <Literal xml:lang="en">coexists_with</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#diagnosed_with</IRI>
+        <Literal xml:lang="en">diagnosed_with</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#diagnoses</IRI>
+        <Literal xml:lang="en">diagnoses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has</IRI>
+        <Literal xml:lang="en">has</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#manifested_as</IRI>
+        <Literal xml:lang="en">manifested_as</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#receives_a</IRI>
+        <Literal xml:lang="en">receives_a</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

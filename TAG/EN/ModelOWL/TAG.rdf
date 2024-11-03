@@ -1,0 +1,1953 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://TAG.com#"
+     xml:base="http://TAG.com"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:gufo="http://purl.org/nemo/gufo#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://TAG.com">
+        <owl:imports rdf:resource="http://purl.org/nemo/gufo#"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://TAG.com#about -->
+
+    <owl:ObjectProperty rdf:about="http://TAG.com#about">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://TAG.com#Anxiety"/>
+        <rdfs:range rdf:resource="http://TAG.com#Trigger"/>
+        <rdfs:label xml:lang="en">about</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://TAG.com#accompanies -->
+
+    <owl:ObjectProperty rdf:about="http://TAG.com#accompanies">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://TAG.com#HealthProfessional"/>
+        <rdfs:range rdf:resource="http://TAG.com#Patient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://TAG.com#administered_with_1 -->
+
+    <owl:ObjectProperty rdf:about="http://TAG.com#administered_with_1">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://TAG.com#Treatment"/>
+        <rdfs:range rdf:resource="http://TAG.com#Medication"/>
+        <rdfs:range rdf:resource="http://TAG.com#Psychological"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://TAG.com#caused_by -->
+
+    <owl:ObjectProperty rdf:about="http://TAG.com#caused_by">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://TAG.com#Symptom"/>
+        <rdfs:range rdf:resource="http://TAG.com#Anxiety"/>
+        <rdfs:comment>Functional: Because the symptoms cannot be caused by anything other than anxiety (for example, they cannot be caused by substances).
+
+Transitive: If a symptom is caused by anxiety and that anxiety is caused by a trigger, then the symptom is caused by a trigger.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://TAG.com#coIntervention -->
+
+    <owl:ObjectProperty rdf:about="http://TAG.com#coIntervention">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://TAG.com#Medication"/>
+        <rdfs:range rdf:resource="http://TAG.com#Psychological"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://TAG.com#coexists_with -->
+
+    <owl:ObjectProperty rdf:about="http://TAG.com#coexists_with">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://TAG.com#Neurological"/>
+        <rdfs:range rdf:resource="http://TAG.com#Somatic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://TAG.com#componentOf -->
+
+    <owl:ObjectProperty rdf:about="http://TAG.com#componentOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://TAG.com#GAD"/>
+        <rdfs:range rdf:resource="http://TAG.com#Symptom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://TAG.com#diagnosed_with -->
+
+    <owl:ObjectProperty rdf:about="http://TAG.com#diagnosed_with">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://TAG.com#Patient"/>
+        <rdfs:range rdf:resource="http://TAG.com#GAD"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://TAG.com#diagnoses -->
+
+    <owl:ObjectProperty rdf:about="http://TAG.com#diagnoses">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://TAG.com#HealthProfessional"/>
+        <rdfs:range rdf:resource="http://TAG.com#GAD"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://TAG.com#feel -->
+
+    <owl:ObjectProperty rdf:about="http://TAG.com#feel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://TAG.com#Patient"/>
+        <rdfs:range rdf:resource="http://TAG.com#Anxiety"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://TAG.com#has -->
+
+    <owl:ObjectProperty rdf:about="http://TAG.com#has">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://TAG.com#Patient"/>
+        <rdfs:range rdf:resource="http://TAG.com#Comorbidity"/>
+        <rdfs:range rdf:resource="http://TAG.com#Symptom"/>
+        <rdfs:label xml:lang="en">has</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://TAG.com#manifested_as -->
+
+    <owl:ObjectProperty rdf:about="http://TAG.com#manifested_as">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://TAG.com#Symptom"/>
+        <rdfs:range rdf:resource="http://TAG.com#Neurological"/>
+        <rdfs:range rdf:resource="http://TAG.com#Somatic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://TAG.com#possesses -->
+
+    <owl:ObjectProperty rdf:about="http://TAG.com#possesses">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://TAG.com#Patient"/>
+        <rdfs:range rdf:resource="http://TAG.com#Comorbidity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://TAG.com#receives_a -->
+
+    <owl:ObjectProperty rdf:about="http://TAG.com#receives_a">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://TAG.com#Patient"/>
+        <rdfs:range rdf:resource="http://TAG.com#Treatment"/>
+        <rdfs:label xml:lang="en">receives_a</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#externallyDependsOn -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#externallyDependsOn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#historicallyDependsOn -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#historicallyDependsOn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#inheresIn -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#inheresIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#mediates -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#mediates">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#wasCreatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#wasCreatedIn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://TAG.com#hasAge -->
+
+    <owl:DatatypeProperty rdf:about="http://TAG.com#hasAge">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://TAG.com#Patient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://TAG.com#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://TAG.com#hasName">
+        <rdfs:domain rdf:resource="http://TAG.com#Patient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://TAG.com#Addictive -->
+
+    <owl:Class rdf:about="http://TAG.com#Addictive">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#Substance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#Anxiolytic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#TemporaryUse"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Antidepressant -->
+
+    <owl:Class rdf:about="http://TAG.com#Antidepressant">
+        <rdfs:subClassOf rdf:resource="http://TAG.com#Medication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#ContinuousUse"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#LateEffect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://TAG.com#Anxiolytic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Anxiety -->
+
+    <owl:Class rdf:about="http://TAG.com#Anxiety">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#Excessive"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Anxiolytic -->
+
+    <owl:Class rdf:about="http://TAG.com#Anxiolytic">
+        <rdfs:subClassOf rdf:resource="http://TAG.com#Medication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#Addictive"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#ImmediateEffect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#TemporaryUse"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Comorbidity -->
+
+    <owl:Class rdf:about="http://TAG.com#Comorbidity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#ContinuousUse -->
+
+    <owl:Class rdf:about="http://TAG.com#ContinuousUse">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#Antidepressant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#NonAddictive"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Course -->
+
+    <owl:Class rdf:about="http://TAG.com#Course">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://TAG.com#Floating"/>
+                    <rdf:Description rdf:about="http://TAG.com#LongDuration"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#GAD"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#GAD"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Diagnosis -->
+
+    <owl:Class rdf:about="http://TAG.com#Diagnosis">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Relator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#HealthProfessional"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#Patient"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#GAD"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#DifficultyConcentrating -->
+
+    <owl:Class rdf:about="http://TAG.com#DifficultyConcentrating">
+        <rdfs:subClassOf rdf:resource="http://TAG.com#Neurological"/>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#DisturbedSleep -->
+
+    <owl:Class rdf:about="http://TAG.com#DisturbedSleep">
+        <rdfs:subClassOf rdf:resource="http://TAG.com#Neurological"/>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Excessive -->
+
+    <owl:Class rdf:about="http://TAG.com#Excessive">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#Intensity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#Anxiety"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Fatigability -->
+
+    <owl:Class rdf:about="http://TAG.com#Fatigability">
+        <rdfs:subClassOf rdf:resource="http://TAG.com#Neurological"/>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Floating -->
+
+    <owl:Class rdf:about="http://TAG.com#Floating">
+        <rdfs:subClassOf rdf:resource="http://TAG.com#Course"/>
+        <owl:disjointWith rdf:resource="http://TAG.com#LongDuration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#GAD -->
+
+    <owl:Class rdf:about="http://TAG.com#GAD">
+        <rdfs:subClassOf rdf:resource="http://TAG.com#PsychiatricDisorder"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#Diagnosis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#wasCreatedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#Trigger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#Course"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#Course"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#HealthProfessional -->
+
+    <owl:Class rdf:about="http://TAG.com#HealthProfessional">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#Diagnosis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#ImmediateEffect -->
+
+    <owl:Class rdf:about="http://TAG.com#ImmediateEffect">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#Substance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#Anxiolytic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Intensity -->
+
+    <owl:Class rdf:about="http://TAG.com#Intensity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#Excessive"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Irritability -->
+
+    <owl:Class rdf:about="http://TAG.com#Irritability">
+        <rdfs:subClassOf rdf:resource="http://TAG.com#Neurological"/>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#LateEffect -->
+
+    <owl:Class rdf:about="http://TAG.com#LateEffect">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#Substance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#Antidepressant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#LongDuration -->
+
+    <owl:Class rdf:about="http://TAG.com#LongDuration">
+        <rdfs:subClassOf rdf:resource="http://TAG.com#Course"/>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#MajorDepression -->
+
+    <owl:Class rdf:about="http://TAG.com#MajorDepression">
+        <rdfs:subClassOf rdf:resource="http://TAG.com#PsychiatricDisorder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Manifestation -->
+
+    <owl:Class rdf:about="http://TAG.com#Manifestation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Relator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#Somatic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#Neurological"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#Symptom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Medication -->
+
+    <owl:Class rdf:about="http://TAG.com#Medication">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://TAG.com#Antidepressant"/>
+                    <rdf:Description rdf:about="http://TAG.com#Anxiolytic"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#Prescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#MuscleTension -->
+
+    <owl:Class rdf:about="http://TAG.com#MuscleTension">
+        <rdfs:subClassOf rdf:resource="http://TAG.com#Somatic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Neurological -->
+
+    <owl:Class rdf:about="http://TAG.com#Neurological">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://TAG.com#DifficultyConcentrating"/>
+                    <rdf:Description rdf:about="http://TAG.com#DisturbedSleep"/>
+                    <rdf:Description rdf:about="http://TAG.com#Fatigability"/>
+                    <rdf:Description rdf:about="http://TAG.com#Irritability"/>
+                    <rdf:Description rdf:about="http://TAG.com#Restlessness"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#Manifestation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#NonAddictive -->
+
+    <owl:Class rdf:about="http://TAG.com#NonAddictive">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#historicallyDependsOn"/>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#Substance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#ContinuousUse"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#PanicDisorder -->
+
+    <owl:Class rdf:about="http://TAG.com#PanicDisorder">
+        <rdfs:subClassOf rdf:resource="http://TAG.com#PsychiatricDisorder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Patient -->
+
+    <owl:Class rdf:about="http://TAG.com#Patient">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#Diagnosis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Personal -->
+
+    <owl:Class rdf:about="http://TAG.com#Personal">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#Trigger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Prescription -->
+
+    <owl:Class rdf:about="http://TAG.com#Prescription">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Relator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#Medication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#Psychological"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#Treatment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#PsychiatricDisorder -->
+
+    <owl:Class rdf:about="http://TAG.com#PsychiatricDisorder">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://TAG.com#GAD"/>
+                    <rdf:Description rdf:about="http://TAG.com#MajorDepression"/>
+                    <rdf:Description rdf:about="http://TAG.com#PanicDisorder"/>
+                    <rdf:Description rdf:about="http://TAG.com#SocialAnxietyDisorder"/>
+                    <rdf:Description rdf:about="http://TAG.com#SpecificPhobia"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://TAG.com#Comorbidity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Psychological -->
+
+    <owl:Class rdf:about="http://TAG.com#Psychological">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#Prescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Psychotherapy -->
+
+    <owl:Class rdf:about="http://TAG.com#Psychotherapy">
+        <rdfs:subClassOf rdf:resource="http://TAG.com#Psychological"/>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Restlessness -->
+
+    <owl:Class rdf:about="http://TAG.com#Restlessness">
+        <rdfs:subClassOf rdf:resource="http://TAG.com#Neurological"/>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#SocialAnxietyDisorder -->
+
+    <owl:Class rdf:about="http://TAG.com#SocialAnxietyDisorder">
+        <rdfs:subClassOf rdf:resource="http://TAG.com#PsychiatricDisorder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Somatic -->
+
+    <owl:Class rdf:about="http://TAG.com#Somatic">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#Manifestation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#SpecificPhobia -->
+
+    <owl:Class rdf:about="http://TAG.com#SpecificPhobia">
+        <rdfs:subClassOf rdf:resource="http://TAG.com#PsychiatricDisorder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Substance -->
+
+    <owl:Class rdf:about="http://TAG.com#Substance">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#Addictive"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#ImmediateEffect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#LateEffect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#historicallyDependsOn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#NonAddictive"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Symptom -->
+
+    <owl:Class rdf:about="http://TAG.com#Symptom">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#historicallyDependsOn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#Treatment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#Manifestation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#TemporaryUse -->
+
+    <owl:Class rdf:about="http://TAG.com#TemporaryUse">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#Anxiolytic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#externallyDependsOn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#Addictive"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Treatment -->
+
+    <owl:Class rdf:about="http://TAG.com#Treatment">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#historicallyDependsOn"/>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#Symptom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:someValuesFrom rdf:resource="http://TAG.com#Prescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://TAG.com#Trigger -->
+
+    <owl:Class rdf:about="http://TAG.com#Trigger">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#wasCreatedIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#GAD"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TAG.com#Personal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Category -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Category"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Event -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Event"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#EventType -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#EventType"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#FunctionalComplex -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#IntrinsicMode -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Kind -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Kind"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#MaterialRelationshipType -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Relator -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Relator"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#SubKind -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#SubKind"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://TAG.com#Addictive -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Addictive">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Antidepressant -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Antidepressant">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Anxiety -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Anxiety">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Anxiolytic -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Anxiolytic">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Bromazepam -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Bromazepam">
+        <rdf:type rdf:resource="http://TAG.com#Anxiolytic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Clonazepam -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Clonazepam">
+        <rdf:type rdf:resource="http://TAG.com#Anxiolytic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Comorbidity -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Comorbidity">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#ContinuousUse -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#ContinuousUse">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Course -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Course">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Diagnosis -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Diagnosis">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#DifficultyConcentrating -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#DifficultyConcentrating">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#DisturbedSleep -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#DisturbedSleep">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Estazolam -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Estazolam">
+        <rdf:type rdf:resource="http://TAG.com#Anxiolytic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Excessive -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Excessive">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Fatigability -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Fatigability">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Floating -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Floating">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#GAD -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#GAD">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#HealthProfessional -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#HealthProfessional">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#ImmediateEffect -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#ImmediateEffect">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Intensity -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Intensity">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Irritability -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Irritability">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#LateEffect -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#LateEffect">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#LongDuration -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#LongDuration">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#MajorDepression -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#MajorDepression">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Manifestation -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Manifestation">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#MarceloSantos -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#MarceloSantos">
+        <rdf:type rdf:resource="http://TAG.com#HealthProfessional"/>
+        <accompanies rdf:resource="http://TAG.com#Paciente5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Medication -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Medication">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#MichaelDouglas -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#MichaelDouglas">
+        <rdf:type rdf:resource="http://TAG.com#HealthProfessional"/>
+        <accompanies rdf:resource="http://TAG.com#Paciente4"/>
+        <accompanies rdf:resource="http://TAG.com#Paciente6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#MuscleTension -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#MuscleTension">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Neurological -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Neurological">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#NonAddictive -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#NonAddictive">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Paciente1 -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Paciente1">
+        <rdf:type rdf:resource="http://TAG.com#Patient"/>
+        <feel rdf:resource="http://TAG.com#Anxiety"/>
+        <has rdf:resource="http://TAG.com#Symptom"/>
+        <manifested_as rdf:resource="http://TAG.com#Somatic"/>
+        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</hasAge>
+        <hasName>BrendaLohanna</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Paciente2 -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Paciente2">
+        <rdf:type rdf:resource="http://TAG.com#Patient"/>
+        <feel rdf:resource="http://TAG.com#Anxiety"/>
+        <has rdf:resource="http://TAG.com#Symptom"/>
+        <manifested_as rdf:resource="http://TAG.com#Somatic"/>
+        <possesses rdf:resource="http://TAG.com#SpecificPhobia"/>
+        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</hasAge>
+        <hasName>LuizFelipe</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Paciente3 -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Paciente3">
+        <rdf:type rdf:resource="http://TAG.com#Patient"/>
+        <administered_with_1 rdf:resource="http://TAG.com#Clonazepam"/>
+        <administered_with_1 rdf:resource="http://TAG.com#SNRI"/>
+        <diagnosed_with rdf:resource="http://TAG.com#GAD"/>
+        <feel rdf:resource="http://TAG.com#Anxiety"/>
+        <has rdf:resource="http://TAG.com#MajorDepression"/>
+        <has rdf:resource="http://TAG.com#Symptom"/>
+        <manifested_as rdf:resource="http://TAG.com#Fatigability"/>
+        <manifested_as rdf:resource="http://TAG.com#MuscleTension"/>
+        <receives_a rdf:resource="http://TAG.com#Treatment"/>
+        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</hasAge>
+        <hasName>LarissaTrrs</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Paciente4 -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Paciente4">
+        <rdf:type rdf:resource="http://TAG.com#Patient"/>
+        <administered_with_1 rdf:resource="http://TAG.com#Estazolam"/>
+        <administered_with_1 rdf:resource="http://TAG.com#SSRI"/>
+        <diagnosed_with rdf:resource="http://TAG.com#GAD"/>
+        <feel rdf:resource="http://TAG.com#Anxiety"/>
+        <has rdf:resource="http://TAG.com#Symptom"/>
+        <manifested_as rdf:resource="http://TAG.com#DisturbedSleep"/>
+        <manifested_as rdf:resource="http://TAG.com#Fatigability"/>
+        <manifested_as rdf:resource="http://TAG.com#MuscleTension"/>
+        <manifested_as rdf:resource="http://TAG.com#Restlessness"/>
+        <receives_a rdf:resource="http://TAG.com#Treatment"/>
+        <gufo:inheresIn rdf:resource="http://TAG.com#LongDuration"/>
+        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</hasAge>
+        <hasName>JorgeHugo</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Paciente5 -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Paciente5">
+        <rdf:type rdf:resource="http://TAG.com#Patient"/>
+        <administered_with_1 rdf:resource="http://TAG.com#Bromazepam"/>
+        <administered_with_1 rdf:resource="http://TAG.com#SSRI"/>
+        <diagnosed_with rdf:resource="http://TAG.com#GAD"/>
+        <feel rdf:resource="http://TAG.com#Anxiety"/>
+        <has rdf:resource="http://TAG.com#Symptom"/>
+        <manifested_as rdf:resource="http://TAG.com#Irritability"/>
+        <manifested_as rdf:resource="http://TAG.com#MuscleTension"/>
+        <manifested_as rdf:resource="http://TAG.com#Restlessness"/>
+        <possesses rdf:resource="http://TAG.com#SpecificPhobia"/>
+        <receives_a rdf:resource="http://TAG.com#Treatment"/>
+        <gufo:inheresIn rdf:resource="http://TAG.com#Floating"/>
+        <gufo:inheresIn rdf:resource="http://TAG.com#LongDuration"/>
+        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</hasAge>
+        <hasName>JoseSilva</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Paciente6 -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Paciente6">
+        <rdf:type rdf:resource="http://TAG.com#Patient"/>
+        <administered_with_1 rdf:resource="http://TAG.com#Clonazepam"/>
+        <administered_with_1 rdf:resource="http://TAG.com#SNRI"/>
+        <diagnosed_with rdf:resource="http://TAG.com#GAD"/>
+        <feel rdf:resource="http://TAG.com#Anxiety"/>
+        <has rdf:resource="http://TAG.com#Symptom"/>
+        <manifested_as rdf:resource="http://TAG.com#DisturbedSleep"/>
+        <manifested_as rdf:resource="http://TAG.com#Fatigability"/>
+        <manifested_as rdf:resource="http://TAG.com#MuscleTension"/>
+        <manifested_as rdf:resource="http://TAG.com#Somatic"/>
+        <possesses rdf:resource="http://TAG.com#PanicDisorder"/>
+        <receives_a rdf:resource="http://TAG.com#Treatment"/>
+        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</hasAge>
+        <hasName>MariaCabral</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#PanicDisorder -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#PanicDisorder">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Patient -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Patient">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Personal -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Personal">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Prescription -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Prescription">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#PsychiatricDisorder -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#PsychiatricDisorder">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Psychological -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Psychological">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Psychotherapy -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Psychotherapy">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Restlessness -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Restlessness">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#SNRI -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#SNRI">
+        <rdf:type rdf:resource="http://TAG.com#Antidepressant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#SSRI -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#SSRI">
+        <rdf:type rdf:resource="http://TAG.com#Antidepressant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#SocialAnxietyDisorder -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#SocialAnxietyDisorder">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Somatic -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Somatic">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#SpecificPhobia -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#SpecificPhobia">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Substance -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Substance">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Symptom -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Symptom">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#TemporaryUse -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#TemporaryUse">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Treatment -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Treatment">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#Trigger -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#Trigger">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#accompanies -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#accompanies">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#administered_with -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#administered_with">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#administered_with_1 -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#administered_with_1">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#coIntervention -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#coIntervention">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#coexists_with -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#coexists_with">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#diagnosed_with -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#diagnosed_with">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#diagnoses -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#diagnoses">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#manifested_as -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#manifested_as">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TAG.com#manifested_as_1 -->
+
+    <owl:NamedIndividual rdf:about="http://TAG.com#manifested_as_1">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#MaterialRelationshipType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://TAG.com#Addictive">
+        <rdfs:label xml:lang="en">Addictive</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Antidepressant">
+        <rdfs:label xml:lang="en">Antidepressant</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Anxiety">
+        <rdfs:label xml:lang="en">Anxiety</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Anxiolytic">
+        <rdfs:label xml:lang="en">Anxiolytic</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Comorbidity">
+        <rdfs:label xml:lang="en">Comorbidity</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#ContinuousUse">
+        <rdfs:label xml:lang="en">ContinuousUse</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Course">
+        <rdfs:label xml:lang="en">Course</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Diagnosis">
+        <rdfs:label xml:lang="en">Diagnosis</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#DifficultyConcentrating">
+        <rdfs:label xml:lang="en">DifficultyConcentrating</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#DisturbedSleep">
+        <rdfs:label xml:lang="en">Disturbed sleep</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Excessive">
+        <rdfs:label xml:lang="en">Excessive</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Fatigability">
+        <rdfs:label xml:lang="en">Fatigability</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Floating">
+        <rdfs:label xml:lang="en">Floating</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#GAD">
+        <rdfs:label xml:lang="en">GAD</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#HealthProfessional">
+        <rdfs:label xml:lang="en">HealthProfessional</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#ImmediateEffect">
+        <rdfs:label xml:lang="en">ImmediateEffect</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Intensity">
+        <rdfs:label xml:lang="en">Intensity</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Irritability">
+        <rdfs:label xml:lang="en">Irritability</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#LateEffect">
+        <rdfs:label xml:lang="en">LateEffect</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#LongDuration">
+        <rdfs:label xml:lang="en">LongDuration</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#MajorDepression">
+        <rdfs:label xml:lang="en">MajorDepression</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Manifestation">
+        <rdfs:label xml:lang="en">Manifestation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Medication">
+        <rdfs:label xml:lang="en">Medication</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#MuscleTension">
+        <rdfs:label xml:lang="en">MuscleTension</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Neurological">
+        <rdfs:label xml:lang="en">Neurological</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#NonAddictive">
+        <rdfs:label xml:lang="en">NonAddictive</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#PanicDisorder">
+        <rdfs:label xml:lang="en">PanicDisorder</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Patient">
+        <rdfs:label xml:lang="en">Patient</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Personal">
+        <rdfs:label xml:lang="en">Personal</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Prescription">
+        <rdfs:label xml:lang="en">Prescription</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#PsychiatricDisorder">
+        <rdfs:label xml:lang="en">PsychiatricDisorder</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Psychological">
+        <rdfs:label xml:lang="en">Psychological</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Psychotherapy">
+        <rdfs:label xml:lang="en">Psychotherapy</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Restlessness">
+        <rdfs:label xml:lang="en">Restlessness</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#SocialAnxietyDisorder">
+        <rdfs:label xml:lang="en">SocialAnxietyDisorder</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Somatic">
+        <rdfs:label xml:lang="en">Somatic</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#SpecificPhobia">
+        <rdfs:label xml:lang="en">Specific Phobia</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Substance">
+        <rdfs:label xml:lang="en">Substance</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Symptom">
+        <rdfs:label xml:lang="en">Symptom</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#TemporaryUse">
+        <rdfs:label xml:lang="en">TemporaryUse</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Treatment">
+        <rdfs:label xml:lang="en">Treatment</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#Trigger">
+        <rdfs:label xml:lang="en">Trigger</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#accompanies">
+        <rdfs:label xml:lang="en">accompanies</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#administered_with_1">
+        <rdfs:label xml:lang="en">administered_with</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#coIntervention">
+        <rdfs:label xml:lang="en">co-intervention</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#coexists_with">
+        <rdfs:label xml:lang="en">coexists_with</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#diagnosed_with">
+        <rdfs:label xml:lang="en">diagnosed_with</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#diagnoses">
+        <rdfs:label xml:lang="en">diagnoses</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TAG.com#manifested_as">
+        <rdfs:label xml:lang="en">manifested_as</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://TAG.com#DifficultyConcentrating"/>
+            <rdf:Description rdf:about="http://TAG.com#DisturbedSleep"/>
+            <rdf:Description rdf:about="http://TAG.com#Fatigability"/>
+            <rdf:Description rdf:about="http://TAG.com#Irritability"/>
+            <rdf:Description rdf:about="http://TAG.com#Restlessness"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://TAG.com#GAD"/>
+            <rdf:Description rdf:about="http://TAG.com#MajorDepression"/>
+            <rdf:Description rdf:about="http://TAG.com#PanicDisorder"/>
+            <rdf:Description rdf:about="http://TAG.com#SocialAnxietyDisorder"/>
+            <rdf:Description rdf:about="http://TAG.com#SpecificPhobia"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

@@ -21,10 +21,10 @@ img.button {position: relative; top: 8px;}
 
 div.codebox {overflow: hidden;
     background: #C0C0C0; width: 95%; padding: 5px;
-    border-width: 1px; border-style: solid; border-color: #C0C0C0;
+    border-width: 1px; border-style: solid; border-color: #c7cfd5;
 }
 
-#queryform {background: #C0C0C0; padding: 5px;}
+#queryform {background: #ddddff; padding: 5px;}
 #most_used_classes {text-align: center;}
 
 p.footer {font-size: 8pt; text-align: right;}
@@ -128,3 +128,4 @@ h2 {
   text-decoration: none;
   color: #000000;
 }
+
