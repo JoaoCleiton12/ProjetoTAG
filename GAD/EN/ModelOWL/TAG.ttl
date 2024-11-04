@@ -869,22 +869,26 @@ gufo:SubKind rdf:type owl:Class .
                         gufo:Kind .
 
 
-###  http://TAG.com#MarceloSantos
-:MarceloSantos rdf:type owl:NamedIndividual ,
-                        :HealthProfessional ;
-               :accompanies :Paciente5 .
-
-
 ###  http://TAG.com#Medication
 :Medication rdf:type owl:NamedIndividual ,
                      gufo:Kind .
 
 
-###  http://TAG.com#MichaelDouglas
-:MichaelDouglas rdf:type owl:NamedIndividual ,
-                         :HealthProfessional ;
-                :accompanies :Paciente4 ,
-                             :Paciente6 .
+###  http://TAG.com#Medico1
+:Medico1 rdf:type owl:NamedIndividual ,
+                  :HealthProfessional ;
+         :accompanies :Paciente4 ,
+                      :Paciente6 ;
+         :hasAge 21 ;
+         :hasName "MichaelDouglas" .
+
+
+###  http://TAG.com#Medico2
+:Medico2 rdf:type owl:NamedIndividual ,
+                  :HealthProfessional ;
+         :accompanies :Paciente5 ;
+         :hasAge 38 ;
+         :hasName "MarceloSantos" .
 
 
 ###  http://TAG.com#MuscleTension
